@@ -6,7 +6,7 @@
 " @author		Fwolf <fwolf.aide+fwolfrc@gmail.com>
 " @license		http://opensource.org/licenses/mit-license MIT
 " @since		2012-09-24
-" @link			http://amix.dk/vim/vimrc.html
+" @link			https://github.com/amix/vimrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -18,12 +18,21 @@ set nocompatible
 " 启动自动缩进(ai)
 set autoindent
 
+" Auto reload file when it's modified outside
+set autoread
+
 " 叫vim使用在深色背景dark上看起来比较舒服的颜色显示
 " 但如果是在图形界面下，还是用浅色背景light更舒服
 set background=dark
 
 " 这个将影响退格键的工作，具体情况非常复杂，可以参照:help 'bs'。bs=backspace
 set backspace=2
+
+" 使vim在tab处，插入tab符而不是一串空格
+set noexpandtab
+
+" 关闭文件备份的功能
+set nobackup
 
 " 按照 C 语言的语法，自动地调整缩进的长度
 set cindent
@@ -34,17 +43,24 @@ set columns=80
 " 文件编码
 set fileencodings=utf-bom,utf-8,gb2312,default
 
+" 允许折叠
+" http://scmbob.org/vim_fdm.html
+"set foldenable
+"set foldmethod=indent	" 按缩进折叠
+"set foldmethod=manual	" 手动折叠
+"set foldmethod=marker	" 按标记折叠，默认为 {{{ 和 }}}, 会自动添加
+
 " Sets how many lines of history VIM has to remember
 set history=1000
 
-" 关闭文件备份的功能
-set nobackup
-
-" 使vim在tab处，插入tab符而不是一串空格
-set noexpandtab
+" 显示行号
+"set number
 
 " 使得vim在右下角显示当前行列数
 set ruler
+
+" 光标移动到 buffer 底部和顶部时保持 N 行距里
+set scrolloff=3
 
 " 根据代码结构自动缩进的空格数
 set shiftwidth=4
@@ -54,9 +70,6 @@ set tabstop=4
 
 " 设置了在窗口右侧何处开始换行
 "set wrapmargin=8
-
-set foldenable
-set fdm=marker
 
 
 syntax on
@@ -126,5 +139,13 @@ function RemoveTrailingWhitespace()
 endfunction
 if has("autocmd")
 	autocmd BufWritePre * call RemoveTrailingWhitespace()
+endif
+
+
+
+" 用浅色高亮当前行
+if has("autocmd")
+	autocmd InsertLeave * se nocursorline
+	autocmd InsertEnter * se cursorline
 endif
 
