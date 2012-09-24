@@ -1,4 +1,4 @@
-"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vimrc of Fwolf
 "
 " @package		fwolfrc
@@ -6,12 +6,14 @@
 " @author		Fwolf <fwolf.aide+fwolfrc@gmail.com>
 " @license		http://opensource.org/licenses/mit-license MIT
 " @since		2012-09-24
-"
+" @link			http://amix.dk/vim/vimrc.html
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
 
 " 这个设置将避免vim以和vi高度兼容的方式工作。这个设置需要在每个vimrc文件的开始。从而影响接下来的很多设置。
 set nocompatible
+
 
 " 启动自动缩进(ai)
 set autoindent
@@ -32,6 +34,9 @@ set columns=80
 " 文件编码
 set fileencodings=utf-bom,utf-8,gb2312,default
 
+" Sets how many lines of history VIM has to remember
+set history=1000
+
 " 关闭文件备份的功能
 set nobackup
 
@@ -49,6 +54,10 @@ set tabstop=4
 
 " 设置了在窗口右侧何处开始换行
 "set wrapmargin=8
+
+set foldenable
+set fdm=marker
+
 
 syntax on
 
@@ -94,5 +103,28 @@ if has("autocmd")
 	\ if line("'\"") > 0 && line ("'\"") <= line("$") |
 	\ 	exe "normal g'\"" |
 	\ endif
+endif
+
+
+
+" http://kezeodsnx.pixnet.net/blog/post/25222797-vim自動去除行末空白及最後的空白行
+" Remove trailing whitespace when writing a buffer, but not for diff files.
+" From: Vigil
+function RemoveTrailingWhitespace()
+    if &ft != "diff"
+        let b:curcol = col(".")
+        let b:curline = line(".")
+        silent! %s/\s\+$//
+
+		" Original: remove \n at EOF
+        "silent! %s/\(\s*\n\)\+\%$//
+		" Changed: left 1 \n if more than 1 at EOF
+        silent! %s/\(\s*\n\)\+\%$/\r/
+
+        call cursor(b:curline, b:curcol)
+    endif
+endfunction
+if has("autocmd")
+	autocmd BufWritePre * call RemoveTrailingWhitespace()
 endif
 
