@@ -61,6 +61,7 @@ DIRDATA=`pwd`/
 
 
 # Install
+LnToHomeWithDot ctags
 LnToHomeWithDot tmux.conf
 LnToHomeWithDot vimrc
 LnToHomeWithDot Xresources
