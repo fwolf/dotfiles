@@ -79,31 +79,36 @@ syntax on
 
 
 
-" 禁止自动改变当前Vim窗口的大小
-let Tlist_Inc_Winwidth=0
-" 把方法列表放在屏幕的右侧
-let Tlist_Use_Right_Window=1
-" 让当前不被编辑的文件的方法列表自动折叠起来， 这样可以节约一些屏幕空间
-let Tlist_File_Fold_Auto_Close=1
-
-
+map <silent> <F8> :TlistToggle<CR>
 
 " 删除多层嵌套的邮件引文，顺便删除上面 sender 那行
 " 删除 google groups 的脚注，连同其上下的两个空行
 map <F9> :g/^>\s*>/d<CR> kdd :g/> --\~--/,/> -\~/d<CR> k2dd :wq
 
+" F10去掉自动缩进功能，F11重新打开之，方便粘贴内容
+map <F10> :set autoindent<CR>:set cindent<CR>
+map <F11> :set noautoindent<CR>:set nocindent<CR>
+
 " Vimtips: 设置F12键清除所有内容
 map <F12> 1GdG:wq
-
-" F10去掉自动缩进功能，F11重新打开之，方便粘贴内容
-map <F11> :set noautoindent<CR>:set nocindent<CR>
-map <F10> :set autoindent<CR>:set cindent<CR>
 
 
 
 " Easy comment
 " http://www.vim.org/scripts/script.php?script_id=2082
 :runtime comments.vim
+
+
+
+" TagList
+" 自动开启Tlist
+let Tlist_Auto_Open=0
+" 禁止自动改变当前Vim窗口的大小
+let Tlist_Inc_Winwidth=0
+" 把方法列表放在屏幕的右侧
+let Tlist_Use_Right_Window=0
+" 让当前不被编辑的文件的方法列表自动折叠起来， 这样可以节约一些屏幕空间
+let Tlist_File_Fold_Auto_Close=1
 
 
 
