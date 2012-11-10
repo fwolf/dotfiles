@@ -79,7 +79,8 @@ syntax on
 
 
 
-map <silent> <F7> :TMiniBufExplorer<CR>
+" Mini Buffer Explorer hotkey, but it conflict with BufferExplorer
+"map <silent> <F7> :TMiniBufExplorer<CR>
 " map <silent> <F7> :WMToggle<CR>
 map <silent> <F8> :TlistToggle<CR>
 
@@ -142,12 +143,14 @@ let g:miniBufExplModSelTarget = 1
 " TagList
 " 自动开启Tlist
 let Tlist_Auto_Open=0
-" 禁止自动改变当前Vim窗口的大小
-let Tlist_Inc_Winwidth=0
-" 把方法列表放在屏幕的右侧
-let Tlist_Use_Right_Window=0
+let Tlist_Auto_Update = 1
+let Tlist_Exit_OnlyWindow = 1
 " 让当前不被编辑的文件的方法列表自动折叠起来， 这样可以节约一些屏幕空间
 let Tlist_File_Fold_Auto_Close=1
+" 禁止自动改变当前Vim窗口的大小
+let Tlist_Inc_WinWidth = 0
+" 把方法列表放在屏幕的右侧
+let Tlist_Use_Right_Window=0
 
 
 
@@ -204,4 +207,10 @@ endif
 " 	autocmd InsertLeave * se nocursorline
 " 	autocmd InsertEnter * se cursorline
 " endif
+
+
+" Refresh taglist when save file
+autocmd BufWritePost *.css :TlistUpdate
+autocmd BufWritePost *.js :TlistUpdate
+autocmd BufWritePost *.php :TlistUpdate
 
