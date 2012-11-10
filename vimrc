@@ -79,6 +79,7 @@ syntax on
 
 
 
+" map <silent> <F7> :WMToggle<CR>
 map <silent> <F8> :TlistToggle<CR>
 
 " 删除多层嵌套的邮件引文，顺便删除上面 sender 那行
@@ -91,6 +92,35 @@ map <F11> :set noautoindent<CR>:set nocindent<CR>
 
 " Vimtips: 设置F12键清除所有内容
 map <F12> 1GdG:wq
+
+
+
+" BufExplorer
+" Whether the default help is displayed or not, 0/n, 1/y
+let g:bufExplorerDefaultHelp=1
+" Whether the default help is displayed or not, 0/n, 1/y
+let g:bufExplorerDetailedHelp=0
+" Whether you are taken to the active window when selecting a buffer, 0/n, 1/y
+let g:bufExplorerFindActive=1
+" Whether to sort the buffer in reverse order or not, 0/n, 1/y
+let g:bufExplorerReverseSort=0
+" Whether to show directories in the buffer list, 0/n, 1/y
+let g:bufExplorerShowDirectories=0
+" Whether to show absolute or relative to the current dir, 0/abs, 1/rel
+let g:bufExplorerShowRelativePath=0
+" Weither or not to show buffers on for the specific tab or not, 0/n, 1/y
+let g:bufExplorerShowTabBuffer=1
+" Whether to show unlisted buffer, 0/n, 1/y
+let g:bufExplorerShowUnlisted=1
+" What field the buffers are sorted by
+" Available: extension, fullpath, mru, name, number
+let g:bufExplorerSortBy='number'
+" Where the new split window will be placed, 0/above, 1/below
+"let g:bufExplorerSplitBelow=1
+" Whether to split out the path and file name, 0/n, 1/y
+let g:bufExplorerSplitOutPathName=0
+" Where the new vsplit window will be placed, 0/left, 1/right
+let g:bufExplorerSplitRight=1
 
 
 
@@ -109,6 +139,18 @@ let Tlist_Inc_Winwidth=0
 let Tlist_Use_Right_Window=0
 " 让当前不被编辑的文件的方法列表自动折叠起来， 这样可以节约一些屏幕空间
 let Tlist_File_Fold_Auto_Close=1
+
+
+
+" " WinManager
+" " When only explorer windows left, quit vim? 0/y, 1/n
+" let g:persistentBehaviour=0
+" " Explorer area width
+" let g:winManagerWidth=30
+" " Use vim's default winmanager, 0/y, 1/n
+" let g:defaultExplorer=1
+"
+" let g:winManagerWindowLayout = 'BufExplorer,FileExplorer'
 
 
 
