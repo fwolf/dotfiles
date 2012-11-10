@@ -130,6 +130,14 @@ let g:bufExplorerSplitRight=1
 
 
 
+" Mini Buffer Explorer
+let g:miniBufExplSplitBelow=0
+let g:miniBufExplMaxSize = 0
+" Avoidd MBE open buf in non-editable window
+let g:miniBufExplModSelTarget = 1
+
+
+
 " TagList
 " 自动开启Tlist
 let Tlist_Auto_Open=0
@@ -191,8 +199,8 @@ endif
 
 
 " 用浅色高亮当前行
-if has("autocmd")
-	autocmd InsertLeave * se nocursorline
-	autocmd InsertEnter * se cursorline
-endif
+" if has("autocmd")
+" 	autocmd InsertLeave * se nocursorline
+" 	autocmd InsertEnter * se cursorline
+" endif
 
