@@ -79,16 +79,17 @@ syntax on
 
 
 
+map <silent> <F7> :TMiniBufExplorer<CR>
 " map <silent> <F7> :WMToggle<CR>
 map <silent> <F8> :TlistToggle<CR>
 
+" F10去掉自动缩进功能，F11重新打开之，方便粘贴内容
+map <F9> :set autoindent<CR>:set cindent<CR>
+map <F10> :set noautoindent<CR>:set nocindent<CR>
+
 " 删除多层嵌套的邮件引文，顺便删除上面 sender 那行
 " 删除 google groups 的脚注，连同其上下的两个空行
-map <F9> :g/^>\s*>/d<CR> kdd :g/> --\~--/,/> -\~/d<CR> k2dd :wq
-
-" F10去掉自动缩进功能，F11重新打开之，方便粘贴内容
-map <F10> :set autoindent<CR>:set cindent<CR>
-map <F11> :set noautoindent<CR>:set nocindent<CR>
+map <F11> :g/^>\s*>/d<CR> kdd :g/> --\~--/,/> -\~/d<CR> k2dd :wq
 
 " Vimtips: 设置F12键清除所有内容
 map <F12> 1GdG:wq
