@@ -214,6 +214,30 @@ let Tlist_Use_Right_Window=0
 
 
 
+" Vundle
+" Plugin define here need not ~/.vim/plugin/xxx.vim anymore.
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+" Repo of https://github.com/vim-scripts/ need only repo name
+Bundle 'bufexplorer.zip'
+Bundle 'genutils'
+Bundle 'minibufexpl.vim'
+Bundle 'SelectBuf'
+Bundle 'taglist.vim'
+
+filetype plugin indent on
+" :BundleList			- list configured bundles
+" :BundleInstall(!)		- install(update) bundles
+" :BundleSearch(!) foo	- search(or refresh cache first) for foo
+" :BundleClean(!)		- confirm(or auto-approve) removal of unused bundles
+" NOTE: comments after Bundle command are not allowed..
+
+
+
 " http://plog.longwin.com.tw/my_note-unix/2008/10/30/vim-tips-open-file-line-2008
 " 每次開啟檔案, 都回復到上次的行數
 " Or press `"
