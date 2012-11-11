@@ -37,6 +37,9 @@ set nobackup
 " 按照 C 语言的语法，自动地调整缩进的长度
 set cindent
 
+" 超过指定行数的列高亮
+set colorcolumn=+1
+
 "设置屏幕的行数
 set columns=80
 
@@ -67,6 +70,9 @@ set shiftwidth=4
 
 " tab键跳过的空格数
 set tabstop=4
+
+" Limit line width
+set textwidth=80
 
 " 设置了在窗口右侧何处开始换行
 "set wrapmargin=8
@@ -227,6 +233,8 @@ Bundle 'bufexplorer.zip'
 Bundle 'genutils'
 Bundle 'minibufexpl.vim'
 Bundle 'SelectBuf'
+" Bundle 'Tabular'
+Bundle 'godlygeek/tabular'
 Bundle 'taglist.vim'
 
 filetype plugin indent on
