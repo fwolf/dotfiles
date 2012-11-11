@@ -85,6 +85,9 @@ syntax on
 
 
 
+" Use , as <leader> key too
+nmap , \
+
 " Mini Buffer Explorer hotkey, but it conflict with BufferExplorer
 "map <silent> <F7> :TMiniBufExplorer<CR>
 " map <silent> <F7> :WMToggle<CR>
@@ -234,8 +237,11 @@ Bundle 'genutils'
 Bundle 'minibufexpl.vim'
 Bundle 'SelectBuf'
 " Bundle 'Tabular'
-Bundle 'godlygeek/tabular'
 Bundle 'taglist.vim'
+
+Bundle 'godlygeek/tabular'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on
 " :BundleList			- list configured bundles
