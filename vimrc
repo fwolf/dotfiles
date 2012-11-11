@@ -140,6 +140,54 @@ let g:miniBufExplModSelTarget = 1
 
 
 
+" SelectBuf
+" Hide buffer number, 0/y, 1/n
+let selBufAlwaysHideBufNums = 0
+" Show extra details, 0/n, 1/y
+let selBufAlwaysShowDetails = 1
+" Show help, 0/n, 1/y
+let selBufAlwaysShowHelp = 0
+" Show hidden buffer, 0/n, 1/y
+let selBufAlwaysShowHidden = 1
+" Show full path name, 0/n, 1/with filename, 2/split from filename
+let selBufAlwaysShowPaths = 1
+" Buf select window open mode: split, switch, keep
+let selBufBrowserMode = 'split'
+" Buf sort direction, 1/asc, -1/desc
+let selBufDefaultSortDirection = 1
+" Buf sort order: number, name, path, type, indicators, mru
+let selBufDefaultSortOrder = 'number'
+" Refresh buf browser when add and deleted, 0/n, 1/y
+let selBufEnableDynUpdate = 1
+" Like above, refresh when browser window get focus, 0/n, 1/y
+let selBufDelayedDynUpdate = 0
+" Disable MRU list order for performance, 0/n, 1/disabled
+let selBufDisableMRUlisting = 0
+" Disable summary message, 0/n, 1/disabled
+let selBufDisableSummary = 0
+" Buf sort case insensitive, 0/n, 1/insensitive
+let selBufIgnoreCaseInSort = 1
+" Ignore non-file buffer, 0/n, 1/y
+let selBufIgnoreNonFileBufs = 1
+" Save window size when browser is opend, 0/n, 1/y
+let selBufRestoreWindowSizes = 1
+" Prefix of split browser mode
+let selBufSplitType = ''
+" Use vertically-split window, 0/n, 1/y
+let selBufUseVerticalSplit = 1
+" Execute :file command after buf window close, 0/n, 1/y
+let selBufDoFileOnClose = 1
+" Set width for show full path, -1/nolimit
+let selBufDisplayMaxPath = -1
+" Command to launch file
+let selBufLauncher = ''
+" Save search string in browser window, 0/n, 1/y
+let selBufRestoreSearchString = 1
+" Show relative path, 0/n, 1/y
+let selBufShowRelativePath = 0
+
+
+
 " TagList
 " 自动开启Tlist
 let Tlist_Auto_Open=0
