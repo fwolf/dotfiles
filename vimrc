@@ -37,8 +37,9 @@ set nobackup
 " 按照 C 语言的语法，自动地调整缩进的长度
 set cindent
 
-" 超过指定行数的列高亮
-set colorcolumn=+1
+" 超过 textwidth 指定行数的列高亮
+" set colorcolumn=+1
+" highlight ColorColumn ctermbg=lightgray guibg=lightgrey
 
 "设置屏幕的行数
 set columns=80
@@ -72,7 +73,7 @@ set shiftwidth=4
 set tabstop=4
 
 " Limit line width
-set textwidth=80
+set textwidth=72
 
 " 设置了在窗口右侧何处开始换行
 "set wrapmargin=8
@@ -240,8 +241,10 @@ Bundle 'SelectBuf'
 Bundle 'taglist.vim'
 
 Bundle 'godlygeek/tabular'
+" Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-surround'
 
 filetype plugin indent on
 " :BundleList			- list configured bundles
