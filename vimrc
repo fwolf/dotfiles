@@ -148,7 +148,7 @@ let selBufAlwaysShowDetails = 1
 " Show help, 0/n, 1/y
 let selBufAlwaysShowHelp = 0
 " Show hidden buffer, 0/n, 1/y
-let selBufAlwaysShowHidden = 1
+let selBufAlwaysShowHidden = 0
 " Show full path name, 0/n, 1/with filename, 2/split from filename
 let selBufAlwaysShowPaths = 1
 " Buf select window open mode: split, switch, keep
@@ -174,7 +174,7 @@ let selBufRestoreWindowSizes = 1
 " Prefix of split browser mode
 let selBufSplitType = ''
 " Use vertically-split window, 0/n, 1/y
-let selBufUseVerticalSplit = 1
+let selBufUseVerticalSplit = 0
 " Execute :file command after buf window close, 0/n, 1/y
 let selBufDoFileOnClose = 1
 " Set width for show full path, -1/nolimit
