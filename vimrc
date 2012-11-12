@@ -73,7 +73,7 @@ set shiftwidth=4
 set tabstop=4
 
 " Limit line width
-set textwidth=72
+"set textwidth=72
 
 " 设置了在窗口右侧何处开始换行
 "set wrapmargin=8
