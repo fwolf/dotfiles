@@ -150,6 +150,14 @@ let g:miniBufExplModSelTarget = 1
 
 
 
+" NERDTree
+" Close NERDTree window after open file, 0/n, 1/y
+let NERDTreeQuitOnOpen = 0
+" Window position, left/right
+let NERDTreeWinPos = 'right'
+
+
+
 " SelectBuf
 " Hide buffer number, 0/y, 1/n
 let selBufAlwaysHideBufNums = 0
@@ -235,15 +243,15 @@ Bundle 'gmarik/vundle'
 " Repo of https://github.com/vim-scripts/ need only repo name
 Bundle 'bufexplorer.zip'
 Bundle 'genutils'
-Bundle 'minibufexpl.vim'
-Bundle 'SelectBuf'
-" Bundle 'Tabular'
-Bundle 'taglist.vim'
-
-Bundle 'godlygeek/tabular'
-" Bundle 'majutsushi/tagbar'
+" Bundle 'minibufexpl.vim'
+Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
+Bundle 'SelectBuf'
+" Bundle 'Tabular'
+Bundle 'godlygeek/tabular'
+" Bundle 'majutsushi/tagbar'
+Bundle 'taglist.vim'
 Bundle 'tpope/vim-surround'
 
 filetype plugin indent on
