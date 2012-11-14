@@ -243,6 +243,14 @@ let Tlist_Use_Right_Window=0
 
 
 
+" vim-session
+" Auto load session, 'prompt/yes/no'
+let g:session_autoload = 'no'
+" Auto load session, 'prompt/yes/no'
+let g:session_autosave = 'prompt'
+
+
+
 " Vundle
 " Plugin define here need not ~/.vim/plugin/xxx.vim anymore.
 filetype off
@@ -263,6 +271,7 @@ Bundle 'SelectBuf'
 Bundle 'godlygeek/tabular'
 " Bundle 'majutsushi/tagbar'
 Bundle 'taglist.vim'
+Bundle 'xolox/vim-session'
 Bundle 'tpope/vim-surround'
 
 filetype plugin indent on
