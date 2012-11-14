@@ -89,6 +89,9 @@ syntax on
 " Use , as <leader> key too
 nmap , \
 
+" Call SelectBuf, defaut key <F3> also usable
+map <leader>bb :SelectBuf<CR>
+
 " Mini Buffer Explorer hotkey, but it conflict with BufferExplorer
 "map <silent> <F7> :TMiniBufExplorer<CR>
 " map <silent> <F7> :WMToggle<CR>
@@ -143,18 +146,26 @@ let g:bufExplorerSplitRight=1
 
 
 " Mini Buffer Explorer
-let g:miniBufExplSplitBelow=0
-let g:miniBufExplMaxSize = 0
+" Avoid vim highlight bug
+" let g:miniBufExplForceSyntaxEnable = 0
+" Window max lines
+let g:miniBufExplMaxSize = 2
 " Avoidd MBE open buf in non-editable window
 let g:miniBufExplModSelTarget = 1
+" 0/upper or left, 1/down or right
+let g:miniBufExplSplitBelow = 0
+" let g:miniBufExplVSplit = 20
 
 
 
 " NERDTree
+" Disable Bookmarks, 0/n, 1/y
+let NERDTreeMinimalUI = 1
 " Close NERDTree window after open file, 0/n, 1/y
 let NERDTreeQuitOnOpen = 0
 " Window position, left/right
 let NERDTreeWinPos = 'right'
+let NERDTreeWinSize = 15
 
 
 
