@@ -77,6 +77,8 @@ fi
 
 
 # Install
+LnFile bash_profile	~/.bash_profile
+LnFile bashrc		~/.bashrc
 LnFile ctags		~/.ctags
 LnFile tmux.conf	~/.tmux.conf
 LnFile vim			~/.vim
@@ -96,7 +98,7 @@ IFS=$IFSSAVE
 #====================================================================
 #	ChangeLog
 #
-#	V 1.1 / 2012-11-22 /
+#	V 1.1 / 2012-11-22 / 33397adec1
 #		- Add: Profile to manage config for multi computer.
 #		- Enh: File link create mechanism.
 #
