@@ -102,6 +102,9 @@ if [ -f /usr/lib/libtrash/libtrash.so ]; then
 	export LD_PRELOAD=/usr/lib/libtrash/libtrash.so
 	alias TrashOn='export TRASH_OFF=NO'
 	alias TrashOff='export TRASH_OFF=YES'
+fi
+# Execute TrashOff instant after set alias will fail, but why ?
+if [ -f /usr/lib/libtrash/libtrash.so ]; then
 	TrashOff
 fi
 
