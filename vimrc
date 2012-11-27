@@ -349,3 +349,10 @@ if has('autocmd')
 		\ expandtab
 endif
 
+
+
+" Autoload when file is changed outside of vim
+source ~/.vim/plugin/watchforchanges.vim
+let autoreadargs={'autoread':1}
+execute WatchForChanges('*',autoreadargs)
+
