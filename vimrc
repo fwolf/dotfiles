@@ -327,8 +327,25 @@ endif
 " endif
 
 
+
 " Refresh taglist when save file
-autocmd BufWritePost *.css :TlistUpdate
-autocmd BufWritePost *.js :TlistUpdate
-autocmd BufWritePost *.php :TlistUpdate
+if has('autocmd')
+	autocmd BufWritePost *.css	:TlistUpdate
+	autocmd BufWritePost *.js	:TlistUpdate
+	autocmd BufWritePost *.php	:TlistUpdate
+	autocmd BufWritePost *.py	:TlistUpdate
+endif
+
+
+
+" Indent for python
+if has('autocmd')
+	autocmd FileType python setlocal
+		\ tabstop=4
+		\ softtabstop=4
+		\ shiftwidth=4
+"		\ textwidth=80
+		\ smarttab
+		\ expandtab
+endif
 
