@@ -348,6 +348,11 @@ if has('autocmd')
 		\ expandtab
 "		\ textwidth=80
 endif
+" Use TAB in reStructuredText
+if has('autocmd')
+	autocmd BufNewFile,BufRead *.rst setlocal
+		\ noexpandtab
+endif
 
 
 
