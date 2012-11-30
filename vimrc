@@ -348,10 +348,15 @@ if has('autocmd')
 		\ expandtab
 "		\ textwidth=80
 endif
-" Use TAB in reStructuredText
+
+
+" Indent for reStructuredText
+" Use TAB
+" Default GetRSTIndent() is indent by space, is there better replacement ?
 if has('autocmd')
 	autocmd BufNewFile,BufRead *.rst setlocal
 		\ noexpandtab
+		\ indentexpr=GetPHPIndent()
 endif
 
 
