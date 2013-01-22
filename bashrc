@@ -25,6 +25,13 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+# Numlock
+if [ -x /usr/bin/setleds ]; then
+	for tty in /dev/tty{1..6}; do
+		/usr/bin/setleds -D +num < /dev/tty > /dev/null 2>&1
+	done
+fi
+
 export PATH=$PATH:~/bin:/home/fwolf/bin:/usr/lib/mutt/
 
 
