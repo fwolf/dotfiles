@@ -78,6 +78,10 @@ esac
 ####################
 
 
+# Dstat
+alias dstat='dstat -cdlmnprsy'
+
+
 # Git
 alias gitlog="git log --date=iso --pretty=medium --stat --color"
 
@@ -96,7 +100,10 @@ alias la='ls -A'
 alias l='ls -CF'
 
 
-alias dstat='dstat -cdlmnprsy'
+# Pacman
+if [ -x /usr/bin/pacman-color ]; then
+	alias pacman='pacman-color'
+fi
 
 
 ####################
