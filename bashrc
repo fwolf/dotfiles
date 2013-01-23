@@ -32,7 +32,12 @@ if [ -x /usr/bin/setleds ]; then
 	done
 fi
 
-export PATH=$PATH:~/bin:/home/fwolf/bin:/usr/lib/mutt/
+# Path
+export PATH=$PATH\
+:~/bin\
+:~/bin.private\
+:~/bin.public\
+:/usr/lib/mutt/
 
 
 ####################

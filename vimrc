@@ -41,7 +41,7 @@ set cindent
 " set colorcolumn=+1
 " highlight ColorColumn ctermbg=lightgray guibg=lightgrey
 
-"设置屏幕的行数
+"设置屏幕的列数
 set columns=80
 
 " 文件编码
