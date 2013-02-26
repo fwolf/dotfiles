@@ -10,6 +10,11 @@
 # Don't put duplicate lines in the history. See bash(1) for more options
 # 忽略命令行历史的重复命令
 export HISTCONTROL=ignoredups
+# Add timestamp to history
+export HISTTIMEFORMAT='%F %T '
+# Extend history size
+export HISTSIZE=50000
+export HISTFILESIZE=50000
 
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
