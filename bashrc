@@ -22,7 +22,7 @@ export HISTFILESIZE=50000
 # 4. Do replace using sed
 export PROMPT_COMMAND='
 	history -a;\
-	history -n;\
+#	history -n;\
 	TTY=`wc -l $HISTFILE | awk "{print \\$1}"`;\
 	let "TTY -= 1";\
 	TTY=$TTY"s/$/ "`tty | sed -e "s|/dev/||" -e "s|/|_|"`"/";\
