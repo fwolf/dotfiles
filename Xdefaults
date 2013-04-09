@@ -1,8 +1,12 @@
 
 # Color
 Rxvt.background:black
+# Green
 #Rxvt.foreground:#00aa00
-Rxvt.foreground:antiquewhite
+# Light white
+#Rxvt.foreground:antiquewhite
+# Light gray
+Rxvt.foreground: #bbbbbb
 !Rxvt.color7:#aaaaaa
 !Rxvt.color7:gainsboro
 ! lightgray = #cccccc
@@ -13,11 +17,19 @@ Rxvt.color7:#c7c7c7
 Rxvt.inheritPixmap:False
 Rxvt.colorBD:yellow
 Rxvt.colorUL:antiquewhite
+# Transparent
+Rxvt*.transparent: true
+# Shading: 0 to 99 darkens, 101 to 200 lightens
+Rxvt*.shading: 110
+# True Transparent, need WM support compositing or seperate compositor
+#Rxvt.depth: 32
+#Rxvt.background: [95]#000000
 
 # Font
 ! 设置字体分辨率
 Xft.dpi:96
-Rxvt.font:xft:Simsun-10
+#Rxvt.font:xft:Simsun-10
+Rxvt.font:xft:Monospace-9
 !Rxvt.font:7x14,xft:AR PL New Sung
 !Rxvt.font.xftAntialias: true
 !Rxvt.font:xft:Bitstream Vera Sans Mono
