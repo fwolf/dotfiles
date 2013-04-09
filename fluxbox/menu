@@ -1,0 +1,217 @@
+[begin] (Fluxbox)
+	[exec] (Firefox) {/usr/bin/firefox}
+#	[exec] (Firefox 3.0) {/usr/bin/firefox-3.0}
+	[exec] (rxvt-unicode) {urxvtc "$@"; if [ $? -eq 2 ]; then urxvtd -q -o -f; urxvtc "$@"; fi}
+#	[exec] (ROX-Filer) {env LD_PRELOAD=/usr/lib/libtrash/libtrash.so /usr/bin/rox}
+	[exec] (ROX-Filer) {/usr/bin/rox}
+
+	[submenu] (Application)
+		[exec] (Evince) {/usr/bin/evince} </usr/share/pixmaps/evince.xpm>
+		[exec] (GCalcTool) {/usr/bin/gcalctool} </usr/share/pixmaps/gcalctool.xpm>
+		[exec] (Gedit) {/usr/bin/gedit} </usr/share/pixmaps/gedit-icon.xpm>
+		[exec] (GnoCHM) {/usr/bin/gnochm} </usr/share/pixmaps/gnochm.xpm>
+		[exec] (GNOME Commander) {env TRASH_OFF=NO /usr/bin/gnome-commander}
+		[exec] (Gnome Terminal) {/usr/bin/gnome-terminal} </usr/share/pixmaps/gnome-terminal.xpm>
+		[exec] (mirage) {/usr/bin/mirage}
+		[exec] (muCommander) {/usr/bin/mucommander}
+		[exec] (Nautilus) {nautilus --no-desktop}
+		[exec] (PCManFM) {/usr/bin/pcmanfm}
+		[exec] (Qtodo) {/usr/bin/qtodo}
+#		[exec] (rxvt-unicode) {/usr/bin/urxvt}
+		[exec] (Rxvt 144x45) {urxvt -geometry 144x45 -name 144x45}
+		[exec] (rxvt-unicode * 4) {urxvtc "$@"; if [ $? -eq 2 ]; then urxvtd -q -o -f; urxvtc "$@"; fi; urxvtc; urxvtc; urxvtc}
+		[exec] (Scribes) {/usr/bin/scribes} </usr/share/pixmaps/scribes.xpm>
+		[exec] (Scrot) {/usr/bin/scrot -s -b}
+		[exec] (SpaceFM) {/usr/bin/spacefm}
+		[exec] (stardict) {/usr/bin/stardict} </usr/share/pixmaps/stardict_32x32.xpm>
+		[exec] (Xfce4-terminal) {/usr/bin/xfce4-terminal}
+		[exec] (Xfe) {/usr/bin/xfe}
+		[exec] (xsane) {/usr/bin/xsane} </usr/share/pixmaps/xsane.xpm>
+	[end]
+
+	[submenu] (Develop)
+		[exec] (Dia) {/usr/bin/dia}
+		[exec] (Eclipse PHP Development Tools) {/big2/tools/eclipse/eclipse -nl en_US}
+		[exec] (Freemind) {/usr/bin/freemind}
+		[exec] (Geany) {/usr/bin/geany}
+		[exec] (gPHPEdit) {/usr/bin/gphpedit}
+		[exec] (Inkscape) {/usr/bin/inkscape}
+		[exec] (Komodo) {~/tools/Komodo-Edit-6/bin/komodo}
+		[exec] (Mockups) {/opt/Balsamiq\ Mockups/bin/Balsamiq\ Mockups}
+		[exec] (ReText) {/usr/bin/retext}
+		[exec] (Umbrello UML Modeller) {/usr/bin/umbrello}
+		[exec] (Yed) {java -jar /big2/tools/yed/yed.jar}
+		[exec] (ZendStudio) {/big2/tools/ZendStudio-5.5.1/bin/ZDE}
+	[end]
+
+	[submenu] (Internet)
+		[exec] (amule) {/usr/bin/amule} </usr/share/pixmaps/amule.xpm>
+		[exec] (Azureus) {/usr/bin/azureus} </usr/share/pixmaps/azureus.xpm>
+		[exec] (Balsa (maildir\)) {/usr/bin/balsa}
+		[submenu] (Bluetooth)
+			[exec] (Bluetooth Applet) {/usr/bin/bluetooth-applet}
+			[exec] (gnome-obex-server) {/usr/bin/gnome-obex-server}
+			[exec] (gnome-phone-manager) {/usr/bin/gnome-phone-manager}
+		[end]
+		[exec] (Chrome) {http_proxy="127.0.0.1:8118" https_proxy="127.0.0.1:8118" no_proxy="localhost,127.0.0.1,192.168.0.0/24,fwolf.com" /usr/bin/google-chrome}
+		[exec] (Claws Mail) {/usr/bin/claws-mail}
+		[exec] (Downloader for X) {/usr/bin/nt} </usr/share/pixmaps/nt.xpm>
+		[exec] (Epiphany web browser) {/usr/bin/epiphany} <>
+		[exec] (FreeRapid) {cd /big2/tools/FreeRapid/; ./frd.sh}
+		[exec] (Fetion) {/usr/bin/linux-fetion}
+		[exec] (FileZilla) {/usr/bin/filezilla} </usr/share/pixmaps/filezilla.png>
+		[exec] (Google Earth) {/usr/bin/google-earth}
+		[exec] (G Remotedesktop Client) {/usr/bin/grdesktop}
+		[exec] (JDownloader) {/usr/bin/jdownloader}
+		[exec] (KTorrent) {/usr/bin/ktorrent}
+		[exec] (Opera) {/usr/bin/opera}
+		[exec] (Pidgin) {/usr/bin/pidgin}
+		[exec] (Remmina) {/usr/bin/remmina}
+#		[exec] (Terminal Server Client) {/usr/bin/tsclient -f} </usr/share/pixmaps/tsclient.xpm>
+		[exec] (uTorrent) {wine /big2/tools/uTorrent/utorrent.exe}
+		[exec] (xvncviewer) {/usr/bin/xrealvncviewer} <>
+	[end]
+
+	[submenu] (Office)
+		[exec] (LibreOffice Base) {/usr/lib/libreoffice/program/sbase} </usr/share/icons/hicolor/32x32/apps/libreoffice-base.xpm>
+		[exec] (LibreOffice Draw) {/usr/lib/libreoffice/program/sdraw} </usr/share/icons/hicolor/32x32/apps/libreoffice-draw.xpm>
+		[exec] (LibreOffice Calc) {/usr/lib/libreoffice/program/scalc} </usr/share/icons/hicolor/32x32/apps/libreoffice-calc.xpm>
+		[exec] (LibreOffice Impress) {/usr/lib/libreoffice/program/simpress} </usr/share/icons/hicolor/32x32/apps/libreoffice-impress.xpm>
+		[exec] (LibreOffice Writer) {/usr/lib/libreoffice/program/swriter} </usr/share/icons/hicolor/32x32/apps/libreoffice-writer.xpm>
+		[exec] (LibreOffice Math) {/usr/lib/libreoffice/program/smath} </usr/share/icons/hicolor/32x32/apps/libreoffice-math.xpm>
+#		[exec] (OpenOffice.org Base) {/usr/bin/oobase} </usr/share/icons/gnome/32x32/apps/openofficeorg23-base.xpm>
+#		[exec] (OpenOffice.org Draw) {/usr/bin/oodraw} </usr/share/icons/gnome/32x32/apps/openofficeorg23-draw.xpm>
+#		[exec] (OpenOffice.org Calc) {/usr/bin/oocalc} </usr/share/icons/gnome/32x32/apps/openofficeorg23-calc.xpm>
+#		[exec] (OpenOffice.org Impress) {/usr/bin/ooimpress} </usr/share/icons/gnome/32x32/apps/openofficeorg23-impress.xpm>
+#		[exec] (OpenOffice.org Writer) {/usr/bin/oowriter} </usr/share/icons/gnome/32x32/apps/openofficeorg23-writer.xpm>
+#		[exec] (OpenOffice.org Math) {/usr/bin/oomath} </usr/share/icons/gnome/32x32/apps/openofficeorg23-math.xpm>
+
+		[submenu] (Stock)
+			[exec] (JStock) {/big2/tools/stock/jstock/jstock.sh}
+#			[exec] (StockTrace) {/big2/tools/hiweedlayer/hiweedlayer /big2/tools/stock/stocktrace/StockTrace.exe}
+			[exec] (StockTrace) {/usr/bin/wine /big2/tools/stock/stocktrace/StockTrace.exe}
+			[exec] (广发行情) {cd /big2/tools/stock/new_gfzq_v6_fhzx/; wine TdxW.exe}
+			[exec] (广发委托) {cd /big2/tools/stock/gfzq/; /usr/bin/wine xiadan.exe}
+			[exec] (全胜) {/big2/tools/stock/Q-Sheng_x86/Launcher}
+		[end]
+
+		[exec] (Task Coach) {/usr/bin/taskcoach.py}
+		[exec] (ThinkingRock 2.0.1) {/big2/tools/ThinkingRock/tr-2.0.1/bin/tr}
+		[exec] (ThinkingRock 2.2.1) {/big2/tools/ThinkingRock/tr-2.2.1/bin/tr}
+		[exec] (ToDoList) {/home/fwolf/bin/todolist.sh}
+	[end]
+
+	[submenu] (MultiMedia)
+		[exec] (Beep Media Player) {/usr/bin/beep-media-player}
+		[exec] (Brasero) {/usr/bin/brasero}
+		[exec] (Comix) {/usr/bin/comix}
+		[exec] (GIMP) {/usr/bin/gimp} </usr/share/pixmaps/gimp.xpm>
+		[exec] (gmix (Gnome 2.0 Mixer\)) {/usr/bin/gnome-volume-control} </usr/share/pixmaps/gnome-mixer.xpm>
+		[exec] (GMplayer) {/usr/bin/gmplayer}
+		[exec] (gnome-cd (Gnome 2.0 CD Player\)) {/usr/bin/gnome-cd} </usr/share/pixmaps/gnome-cd.xpm>
+		[exec] (grecord (GNOME 2.0 Recorder\)) {/usr/bin/gnome-sound-recorder} </usr/share/pixmaps/gnome-grecord.xpm>
+		[exec] (K3b) {/usr/bin/k3b}
+		[exec] (Rhythmbox) {/usr/bin/rhythmbox} </usr/share/pixmaps/rhythmbox.xpm>
+		[exec] (Scrot -s -b) {/usr/bin/scrot -s -b}
+		[exec] (SMplayer) {/usr/bin/smplayer}
+		[exec] (Sound Juicer) {/usr/bin/sound-juicer} </usr/share/pixmaps/sound-juicer.xpm>
+		[exec] (totem) {/usr/bin/totem} </usr/share/pixmaps/totem.xpm>
+		[exec] (vumeter (Gnome 2.0 Volume Meter\)) {/usr/bin/vumeter} </usr/share/pixmaps/gnome-vumeter.xpm>
+		[exec] (xfmedia) {/usr/bin/xfmedia} <>
+      [end]
+
+	[submenu] (Wine)
+		[exec] (IE6) {/big2/tools/ies4linux/bin/ie6}
+		[exec] (IE7) {/big2/tools/ies4linux/bin/ie7}
+		[exec] (VirtualBox) {/usr/bin/VirtualBox}
+		[submenu] (VMs)
+			[exec] (WinXP start\(vrdp\)) {/usr/bin/VBoxManage startvm WinXP -type vrdp}
+			[exec] (WinXP savestate) {/usr/bin/VBoxManage controlvm WinXP savestate}
+			[exec] (Win7 start\(vrdp\)) {/usr/bin/VBoxManage startvm Win7 -type vrdp}
+			[exec] (Win7 savestate) {/usr/bin/VBoxManage controlvm Win7 savestate}
+		[end]
+# VirtualBox-ose can't use usb device
+#		[exec] (VirtualBox) {/usr/bin/virtualbox}
+		[exec] (VMware Player) {vmplayer}
+		[exec] (VMware Workstation) {vmware}
+		[exec] (Wine Configure) {winecfg}
+		[exec] (Wine Software Uninstall) {uninstaller}
+	[end]
+
+	[submenu] (Games)
+		[exec] (Battle for Wesnoth Editor) {/usr/games/wesnoth_editor} </usr/share/pixmaps/wesnoth_editor-icon.xpm>
+		[exec] (Battle for Wesnoth) {/usr/games/wesnoth-nolog} </usr/share/pixmaps/wesnoth-icon.xpm>
+		[exec] (Battle Tanks) {/usr/games/btanks} <>
+		[exec] (蓝迪游戏) {cd /big2/game/djgame2/; ./startdjg} </big2/game/djgame2/house.png>
+		[exec] (Cedega) {/usr/bin/cedega}
+		[exec] (Crimson Fields) {/usr/games/crimson} <>
+		[exec] (Dwarf Fortress) {/big2/game/dwarf_fortress/df_linux/df} <>
+		[exec] (Four-in-a-row) {/usr/games/gnect} </usr/share/pixmaps/gnect.xpm>
+		[exec] (Freeciv client (GTK version\)) {/usr/games/civclient-gtk} <civclient.xpm>
+		[exec] (Freeciv server) { x-terminal-emulator -T "Freeciv server" -e /usr/games/civserver} <civserver.xpm>
+		[exec] (Gataxx) {/usr/games/gataxx} </usr/share/pixmaps/gataxx.xpm>
+		[exec] (Gnibbles) {/usr/games/gnibbles} </usr/share/pixmaps/gnibbles.xpm>
+		[submenu] (Gnome Games)
+			[exec] (Gnome Blackjack) {/usr/games/blackjack} </usr/share/pixmaps/blackjack.xpm>
+			[exec] (Gnome FreeCell) {/usr/games/sol --variation freecell} </usr/share/pixmaps/freecell.xpm>
+			[exec] (Gnome GYahtzee) {/usr/games/gtali} </usr/share/pixmaps/gtali.xpm>
+			[exec] (Gnome Iagno) {/usr/games/iagno} </usr/share/pixmaps/iagno.xpm>
+			[exec] (Gnome Klotski) {/usr/games/gnotski} </usr/share/pixmaps/gnotski.xpm>
+			[exec] (Gnome Lines) {/usr/games/glines} </usr/share/pixmaps/glines.xpm>
+			[exec] (Gnome Mahjongg) {/usr/games/mahjongg} </usr/share/pixmaps/gnome-mahjongg.xpm>
+			[exec] (Gnome Robots) {/usr/games/gnobots2} </usr/share/pixmaps/gnobots2.xpm>
+			[exec] (Gnome Solitaire Games) {/usr/games/sol} </usr/share/pixmaps/aisleriot.xpm>
+			[exec] (Gnome Tetravex) {/usr/games/gnotravex} </usr/share/pixmaps/gnotravex.xpm>
+			[exec] (Gnometris) {/usr/games/gnometris} </usr/share/pixmaps/gnometris.xpm>
+			[exec] (Gnomine) {/usr/games/gnomine} </usr/share/pixmaps/gnomine.xpm>
+		[end]
+		[exec] (Mirror Magic) {/usr/games/mirrormagic}
+		[exec] (OpenTTD) {/usr/games/openttd} </usr/share/pixmaps/openttd.32.xpm>
+		[exec] (Same Gnome) {/usr/games/same-gnome} </usr/share/pixmaps/gsame.xpm>
+		[exec] (T.E.G. Client) {/usr/games/tegclient} </usr/share/pixmaps/teg.xpm>
+		[exec] (TORIBASH) {/usr/games/toribash} <>
+		[exec] (Trigger) {/usr/games/trigger} <>
+		[exec] (UFO: Alien Invasion) {/usr/games/ufo} <>
+		[exec] (Warzone 2100) {/usr/games/warzone2100} </usr/share/pixmaps/warzone2100-16x16.xpm>
+		[exec] (xmoto) {/usr/games/xmoto} <>
+	[end]
+
+	[separator]
+
+	[submenu] (Configuration)
+		[exec] (Boot-Up Manager) {/usr/bin/gksu /usr/bin/bum} </usr/share/pixmaps/bum.xpm>
+		[exec] (GDM Setup) {su-to-root -X -p root -c /usr/sbin/gdmsetup} </usr/share/pixmaps/gdm.xpm>
+		[exec] (GNOME Configuration Editor) {/usr/bin/gconf-editor}
+		[exec] (Gnome Control Center) {/usr/bin/gnome-control-center}
+		[exec] (GNOME Network Tool) {/usr/bin/gnome-nettool} </usr/share/pixmaps/gnome-nettool.xpm>
+		[exec] (GNOME partition editor) {gksudo /usr/sbin/gparted} </usr/share/pixmaps/gparted.xpm>
+		[exec] (GNOME Power Manager) {/usr/bin/gnome-power-manager}
+		[exec] (GNOME system monitor) {/usr/bin/gnome-system-monitor} <>
+		[exec] (Network Admin) {/usr/bin/network-admin} </usr/share/gnome-system-tools/pixmaps/network.xpm>
+		[exec] (Printing) {/usr/bin/system-config-printer}
+		[exec] (Services Admin) {/usr/bin/services-admin} </usr/share/gnome-system-tools/pixmaps/services.xpm>
+		[exec] (Shares Admin) {/usr/bin/shares-admin} </usr/share/gnome-system-tools/pixmaps/shares.xpm>
+		[exec] (Synaptic Package Manager) {/usr/bin/gksu /usr/sbin/synaptic} </usr/share/synaptic/pixmaps/synaptic_32x32.xpm>
+
+		[config] (Configuration)
+		[submenu] (Styles) {}
+			[stylesdir] (/usr/share/fluxbox/styles)
+			[stylesdir] (~/.fluxbox/styles)
+		[end]
+		[workspaces] (Workspaces)
+
+	[end]
+#	[include] (/etc/X11/fluxbox/fluxbox-menu)
+
+	[separator]
+
+	[submenu] (Exit System 测试)
+		[reconfig] (Reload Config)
+		[restart] (Restart WM)
+		[exit] (Exit to GDM)
+		[exec] (Reboot System) {sudo /sbin/shutdown -r now}
+		[exec] (Suspend) {sudo /usr/sbin/hibernate-ram}
+		[exec] (Hibernate) {sudo /usr/sbin/hibernate-disk}
+		[exec] (Shutdown System) {sudo /sbin/shutdown -h now}
+	[end]
+[end]

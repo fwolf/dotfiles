@@ -1,0 +1,26 @@
+
+[app] (class=Firefox) (title=Mozilla Firefox)
+	[Position]	(UPPERLEFT) {-2 -2}
+[end]
+
+[app] (class=Firefox-bin) (title=Mozilla Firefox)
+	[Position]	(UPPERLEFT) {-2 -2}
+[end]
+
+[app] (opera)
+	[Dimensions] {1024 768}
+#	[Position]	(UPPERLEFT) {50 50}
+[end]
+
+[app] (name=xfce4-terminal)
+	[Position]	(LOWERLEFT)	{0 55}
+[end]
+
+[group]
+	[app] (name=urxvt) (class=URxvt)
+#		 [Position]	(LOWERLEFT)	{0 25}
+		 [Position]	(LOWERLEFT)	{0 -6}
+#		 [Position]	(BOTTOMLEFT)	{0 0}
+	[end]
+[end]
+

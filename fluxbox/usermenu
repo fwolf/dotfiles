@@ -1,0 +1,3 @@
+[subment] (Debian Menu)
+#	[include] (/etc/X11/fluxbox/menudefs.hook)
+[end]
