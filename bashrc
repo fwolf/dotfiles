@@ -7,6 +7,12 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Lang environment, same with /etc/environment
+#LANG="en_US.UTF-8"
+#LANGUAGE="en_US:en_GB:en"
+#LC_CTYPE="zh_CN.UTF-8"
+
+
 # Don't put duplicate lines in the history. See bash(1) for more options
 # 忽略命令行历史的重复命令
 export HISTCONTROL=ignoredups

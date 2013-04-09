@@ -1,0 +1,50 @@
+
+! xrdb data/urxvt.Xresources
+Rxvt.background:black
+Rxvt.foreground:#00aa00
+!Rxvt.color7:#aaaaaa
+!Rxvt.color7:gainsboro
+! lightgray = #cccccc
+!Rxvt.color7:lightgray
+!Rxvt.color7:white
+! or #c9c9c9/#c4c4c4
+Rxvt.color7:#c7c7c7
+!Rxvt.font:xft:Simsun-12
+
+! 设置字体分辨率
+!Xft.dpi:96
+Xft.dpi:96
+! 窗口大小
+!Rxvt.geometry: 80x40+80+80
+!Rxvt.geometry: 80x25+80+80
+Rxvt.geometry: 80x25+20+20
+! 颜色
+!Rxvt.background:#333333
+Rxvt.background:black
+Rxvt.foreground:antiquewhite
+Rxvt.inheritPixmap:False
+Rxvt.colorBD:yellow
+Rxvt.colorUL:antiquewhite
+! 滚动条
+Rxvt.scrollBar:True
+Rxvt.scrollBar_left:True
+!Rxvt.scrollBar_right:True
+Rxvt.scrollBar_floating:False
+Rxvt.scrollstyle:next
+Rxvt.scrollColor:#999999
+! 屏幕缓冲
+Rxvt.saveLines:3000
+Rxvt.color12:DodgerBlue
+!Rxvt.font:7x14,xft:AR PL New Sung
+!Rxvt.font.xftAntialias: true
+Rxvt.font:xft:simsun-11
+!Rxvt.font:xft:Bitstream Vera Sans Mono
+!Rxvt.mfont:-*-simsun-medium-r-*-*-6-*-*-*-*-*-*-*
+!Rxvt.mfontn:-*-simsun-medium-r-*-*-6-*-*-*-*-*-*-*
+Rxvt.multichar_encoding:utf8
+! 输入法一般设置为xim
+inputMethod:ibus
+!inputMethod:xim;Scim除外                 
+! 输入法样式可选:Root(置底) OverTheSpot(跟随) OffTheSpot OnTheSpot，后两种不是所有的都支持
+Rxvt.preeditType:Root 
+

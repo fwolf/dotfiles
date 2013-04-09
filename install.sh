@@ -83,6 +83,7 @@ LnFile ctags		~/.ctags
 LnFile tmux.conf	~/.tmux.conf
 LnFile vim			~/.vim
 LnFile vimrc		~/.vimrc
+LnFile Xdefaults	~/.Xdefaults
 
 
 # Install by profile if sub directory exists
