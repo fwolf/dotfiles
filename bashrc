@@ -113,6 +113,7 @@ alias dstat='dstat -cdlmnprsy'
 
 # Git
 alias gitlog="git log --date=iso --pretty=medium --stat --color"
+alias gitlog1='git log --pretty=oneline'
 
 
 # Ls
