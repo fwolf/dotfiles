@@ -107,7 +107,7 @@
 		[exec] (Comix) {/usr/bin/comix}
 		[exec] (GIMP) {/usr/bin/gimp} </usr/share/pixmaps/gimp.xpm>
 		[exec] (gmix (Gnome 2.0 Mixer\)) {/usr/bin/gnome-volume-control} </usr/share/pixmaps/gnome-mixer.xpm>
-		[exec] (GMplayer) {/usr/bin/gmplayer}
+		[exec] (Gnome Mplayer) {/usr/bin/gnome-mplayer}
 		[exec] (gnome-cd (Gnome 2.0 CD Player\)) {/usr/bin/gnome-cd} </usr/share/pixmaps/gnome-cd.xpm>
 		[exec] (grecord (GNOME 2.0 Recorder\)) {/usr/bin/gnome-sound-recorder} </usr/share/pixmaps/gnome-grecord.xpm>
 		[exec] (K3b) {/usr/bin/k3b}
