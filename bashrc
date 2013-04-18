@@ -107,12 +107,17 @@ esac
 ####################
 
 
+# Bash
+alias ..='cd ../'
+alias ...='cd ../../'
+
+
 # Dstat
 alias dstat='dstat -cdlmnprsy'
 
 
 # Git
-alias gitlog="git log --date=iso --pretty=medium --stat --color"
+alias gitlog='git log --date=iso --pretty=medium --stat --color'
 alias gitlog1='git log --abbrev-commit --pretty=oneline'
 
 
@@ -128,6 +133,10 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
+
+
+# Mount
+alias mount='mount | column -t'
 
 
 # Pacman
