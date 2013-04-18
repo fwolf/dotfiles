@@ -117,8 +117,13 @@ alias dstat='dstat -cdlmnprsy'
 
 
 # Git
+# Normal with lines changed
 alias gitlog='git log --date=iso --pretty=medium --stat --color'
-alias gitlog1='git log --abbrev-commit --pretty=oneline'
+# Short, oneline with branch and tag info
+alias gitlog1='git log --abbrev-commit --pretty=oneline --graph --decorate'
+# Oneline, graph, with author, time and hash
+#alias gitlog2='git log --graph --pretty=format":%s %Cgreen%an, %ar %Cred(%h)%Creset"'
+alias gitlog2='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
 
 # Ls
