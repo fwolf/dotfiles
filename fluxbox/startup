@@ -52,6 +52,6 @@ fi
 # And last but not least we start fluxbox.
 # Because it is the last app you have to run it with ''exec'' before it.
 
-#exec /usr/bin/fluxbox
+exec /usr/bin/fluxbox
 # or if you want to keep a log:
-# exec /usr/bin/fluxbox -log "/home/fwolf/.fluxbox/log"
+#exec /usr/bin/fluxbox -log "/home/fwolf/.fluxbox/log"
