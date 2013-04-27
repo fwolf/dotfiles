@@ -104,7 +104,7 @@
 	[submenu] (MultiMedia)
 		[exec] (Beep Media Player) {/usr/bin/beep-media-player}
 		[exec] (Brasero) {/usr/bin/brasero}
-		[exec] (Comix) {/usr/bin/comix}
+		[exec] (Comix) {/usr/bin/mcomix | /usr/bin/comix}
 		[exec] (GIMP) {/usr/bin/gimp} </usr/share/pixmaps/gimp.xpm>
 		[exec] (gmix (Gnome 2.0 Mixer\)) {/usr/bin/gnome-volume-control} </usr/share/pixmaps/gnome-mixer.xpm>
 		[exec] (Gnome Mplayer) {/usr/bin/gnome-mplayer}
