@@ -63,6 +63,13 @@ export PATH=$PATH\
 :~/bin.public\
 :/usr/lib/mutt/
 
+# Terminal type hack
+case "$TERM" in
+	rxvt-unicode-256color)
+		TERM=rxvt-unicode
+		;;
+esac
+
 
 ####################
 # Prompt
