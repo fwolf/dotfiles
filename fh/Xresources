@@ -44,7 +44,7 @@ Rxvt.font:xft:simsun-11
 Rxvt.multichar_encoding:utf8
 ! 输入法一般设置为xim
 inputMethod:ibus
-!inputMethod:xim;Scim除外                 
+!inputMethod:xim;Scim除外
 ! 输入法样式可选:Root(置底) OverTheSpot(跟随) OffTheSpot OnTheSpot，后两种不是所有的都支持
-Rxvt.preeditType:Root 
+Rxvt.preeditType:Root
 

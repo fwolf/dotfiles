@@ -29,9 +29,11 @@ Rxvt*.shading: 110
 ! 设置字体分辨率
 Xft.dpi:96
 #Rxvt.font:xft:Simsun-10
-Rxvt.font: xft:Monospace-10,xft:Simsun-10
-# Not work very well
-Rxvt.boldFont: xft:Monospace:bold:size=10,xft:Simhei:size=10
+#Rxvt.font: xft:Monospace-10,xft:Simsun-10
+Rxvt.font: xft:DejaVu Sans Mono:autohint=true:pixelsize=12,xft:Simsun-12
+# Works better but pixel 40 seems not so right
+#Rxvt.boldFont: xft:Monospace:bold:size=10,xft:Simhei:size=10
+Rxvt.boldFont: xft:DejaVu Sans Mono:autohint=true:pixelsize=12:bold,xft:WenQuanYi Zen Hei Mono:pixelsize=40:bold
 !Rxvt.font:7x14,xft:AR PL New Sung
 !Rxvt.font.xftAntialias: true
 !Rxvt.font:xft:Bitstream Vera Sans Mono
