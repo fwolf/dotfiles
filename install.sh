@@ -81,6 +81,7 @@ LnFile bash_profile	~/.bash_profile
 LnFile bashrc		~/.bashrc
 LnFile ctags		~/.ctags
 LnFile fluxbox		~/.fluxbox
+LnFile inputrc		~/.inputrc
 LnFile tmux.conf	~/.tmux.conf
 LnFile vim			~/.vim
 LnFile vimrc		~/.vimrc
