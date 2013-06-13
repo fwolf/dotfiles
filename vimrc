@@ -246,8 +246,8 @@ let Tlist_Use_Right_Window=0
 " vim-session
 " Auto load session, 'prompt/yes/no'
 let g:session_autoload = 'no'
-" Auto load session, 'prompt/yes/no'
-let g:session_autosave = 'prompt'
+" Auto save session, 'prompt/yes/no'
+let g:session_autosave = 'no'
 
 
 
@@ -272,6 +272,8 @@ Bundle 'godlygeek/tabular'
 " Bundle 'majutsushi/tagbar'
 Bundle 'Unicode-RST-Tables'
 Bundle 'taglist.vim'
+" vim-session need vim-misc
+Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
 Bundle 'tpope/vim-surround'
 
