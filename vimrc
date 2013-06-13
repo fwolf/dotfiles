@@ -149,7 +149,7 @@ let g:bufExplorerSplitRight=1
 " Avoid vim highlight bug
 " let g:miniBufExplForceSyntaxEnable = 0
 " Window max lines
-let g:miniBufExplMaxSize = 2
+let g:miniBufExplMaxSize = 3
 " Avoidd MBE open buf in non-editable window
 let g:miniBufExplModSelTarget = 1
 " 0/upper or left, 1/down or right
