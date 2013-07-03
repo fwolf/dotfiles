@@ -14,8 +14,8 @@
 
 
 # Don't put duplicate lines in the history. See bash(1) for more options
-# 忽略命令行历史的重复命令
-export HISTCONTROL=ignoredups
+# 忽略命令行历史的重复命令和以空格开头的命令
+export HISTCONTROL=ignoreboth
 # Add timestamp to history
 export HISTTIMEFORMAT='[%F %T] '
 # Extend history size
