@@ -272,6 +272,7 @@ Bundle 'godlygeek/tabular'
 " Bundle 'majutsushi/tagbar'
 Bundle 'Unicode-RST-Tables'
 Bundle 'taglist.vim'
+Bundle 'terryma/vim-multiple-cursors'
 " vim-session need vim-misc
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-session'
