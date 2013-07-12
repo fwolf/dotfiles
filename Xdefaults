@@ -30,11 +30,11 @@ Rxvt*.shading: 110
 Xft.dpi:96
 #Rxvt.font:xft:Simsun-10
 #Rxvt.font: xft:Monospace-10,xft:Simsun-10
-Rxvt.font: xft:DejaVu Sans Mono:autohint=true:pixelsize=12,xft:Simsun-12
+Rxvt.font: xft:DejaVu Sans Mono:autohint=true:pixelsize=14,xft:Simsun-14
 # Works better but pixel 40 seems not so right
 #Rxvt.boldFont: xft:Monospace:bold:size=10,xft:Simhei:size=10
 # WenQuanYi Zen Hei's fontsize is hard to control, while Micro Hei works well
-Rxvt.boldFont: xft:DejaVu Sans Mono:autohint=true:pixelsize=12:bold,xft:WenQuanYi Micro Hei:pixelsize=12:bold
+Rxvt.boldFont: xft:DejaVu Sans Mono:autohint=true:pixelsize=14:bold,xft:WenQuanYi Micro Hei:pixelsize=14:bold
 !Rxvt.font:7x14,xft:AR PL New Sung
 !Rxvt.font.xftAntialias: true
 !Rxvt.font:xft:Bitstream Vera Sans Mono
