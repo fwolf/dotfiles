@@ -341,22 +341,28 @@ endif
 
 
 
-" Indent for python
 if has('autocmd')
+	" Indent html, css, tpl file by 2 space
+	autocmd BufNewFile,BufRead *.htm,*.html,*.css,*.tpl setlocal
+		\ tabstop=2
+		\ shiftwidth=2
+		\ smarttab
+		\ expandtab
+
+
+	" Indent python file by 4 space
 	autocmd FileType python setlocal
 		\ tabstop=4
 		\ softtabstop=4
 		\ shiftwidth=4
 		\ smarttab
 		\ expandtab
-"		\ textwidth=80
-endif
+	"	\ textwidth=80
 
 
-" Indent for reStructuredText
-" Use TAB
-" Default GetRSTIndent() is indent by space, is there better replacement ?
-if has('autocmd')
+	" Indent reStructuredText file by tab
+	" Use TAB
+	" Default GetRSTIndent() is indent by space, is there better replacement ?
 	autocmd BufNewFile,BufRead *.rst setlocal
 		\ noexpandtab
 		\ indentexpr=GetPHPIndent()
