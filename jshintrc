@@ -1,0 +1,16 @@
+{
+    /**
+     * See:
+     * https://github.com/tupton/dotfiles/blob/master/jshintrc
+     * http://www.csdn.net/article/2013-07-11/2816196-JavaScript-code-style-guide
+     * http://www.jshint.com/docs/options/
+     */
+
+    "camelcase": true,
+    "indent": 2,
+    "undef": true,                      // Prevent use undeclared var
+    "quotmark": "single",
+    "maxlen": 80,
+    "trailing": true,                   // No trailing whitespace
+    "curly": true                       // Require {} for everything
+}

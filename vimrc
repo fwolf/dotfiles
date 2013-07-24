@@ -94,6 +94,10 @@ nmap , \
 " Call SelectBuf, defaut key <F3> also usable
 map <leader>bb :SelectBuf<CR>
 
+" Syntastic check
+map <silent> <leader>sc :SyntasticCheck<CR>
+map <silent> <F7> :SyntasticCheck<CR>
+
 " Mini Buffer Explorer hotkey, but it conflict with BufferExplorer
 "map <silent> <F7> :TMiniBufExplorer<CR>
 " map <silent> <F7> :WMToggle<CR>
@@ -219,6 +223,29 @@ let selBufShowRelativePath = 0
 
 
 
+" Syntastic
+" Auto open error window
+let g:syntastic_auto_loc_list=1
+" Skip check when buffer write
+let g:syntastic_check_on_wq = 0
+" Error window height
+let g:syntastic_loc_list_height = 5
+" Automatic check mode
+let g:syntastic_mode_map = {'mode': 'passive',
+    \ 'active_filetypes': [],
+    \ 'passive_filetypes': []}
+" Symbol sign
+let g:syntastic_error_symbol = 'X>'
+let g:syntastic_warning_symbol = '!>'
+" Checkers
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_php_phpcs_post_args = '--standard=psr2'
+" Debug, :mes to view
+let g:syntastic_debug = 1
+
+
+
 " TagList
 " 自动开启Tlist
 let Tlist_Auto_Open=0
@@ -263,6 +290,7 @@ Bundle 'gmarik/vundle'
 
 " Repo of https://github.com/vim-scripts/ need only repo name
 Bundle 'bufexplorer.zip'
+Bundle 'scrooloose/syntastic'
 Bundle 'genutils'
 " Bundle 'minibufexpl.vim'
 Bundle 'fholgado/minibufexpl.vim'
