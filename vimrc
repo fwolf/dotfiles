@@ -29,7 +29,9 @@ set background=dark
 set backspace=2
 
 " 使vim在tab处，插入tab符而不是一串空格
-set noexpandtab
+"set noexpandtab
+" Use space for cooperativity
+set expandtab
 
 " 关闭文件备份的功能
 set nobackup
@@ -342,8 +344,9 @@ endif
 
 
 if has('autocmd')
-	" Indent html, css, tpl file by 2 space
-	autocmd BufNewFile,BufRead *.htm,*.html,*.css,*.tpl setlocal
+	" Indent css, html, js, tpl file by 2 space
+	" Ignore TAB first, these file most use on web, 2 space reduce filesize
+	autocmd BufNewFile,BufRead *.css,*.htm,*.html,*.js,*.tpl setlocal
 		\ tabstop=2
 		\ shiftwidth=2
 		\ smarttab
