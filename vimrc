@@ -241,6 +241,13 @@ let g:syntastic_warning_symbol = '!>'
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
 let g:syntastic_php_phpcs_post_args = '--standard=psr2'
+" Download jsl(Javascript Lint) from: http://javascriptlint.com/download.htm
+" make -f Makefile.ref; Then cp Linux_ALL_DBG.OBJ/jsl to local path, chmod +x
+" Then make checker for filetype smarty,
+" mkdir smarty in checker dir, cp javascript/jsl.vim here,
+" regex replace 'javascript' to 'smarty' in it.
+let g:syntastic_smarty_checkers = ['jsl']
+let g:syntastic_smarty_jsl_conf = '~/.jslrc'
 " Debug, :mes to view
 let g:syntastic_debug = 1
 

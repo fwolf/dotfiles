@@ -83,6 +83,7 @@ LnFile ctags		~/.ctags
 LnFile fluxbox		~/.fluxbox
 LnFile inputrc		~/.inputrc
 LnFile jshintrc     ~/.jshintrc
+LnFile jslrc        ~/.jslrc
 LnFile tmux.conf	~/.tmux.conf
 LnFile vim			~/.vim
 LnFile vimrc		~/.vimrc

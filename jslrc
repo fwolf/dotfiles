@@ -1,0 +1,10 @@
+#
+# Configuration File for JavaScript Lint
+# (http://www.JavaScriptLint.com)
+#
+# `jsl -help:conf` or https://gist.github.com/ervandew/4216539
+# for full list.
+#
+
+
++block_without_braces
