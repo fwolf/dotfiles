@@ -379,9 +379,9 @@ endif
 
 
 if has('autocmd')
-	" Indent css, html, js, tpl file by 2 space
+	" Indent css, html, js, tpl, xml file by 2 space
 	" Ignore TAB first, these file most use on web, 2 space reduce filesize
-	autocmd BufNewFile,BufRead *.css,*.htm,*.html,*.js,*.tpl setlocal
+	autocmd BufNewFile,BufRead *.css,*.htm,*.html,*.js,*.tpl,*.xml setlocal
 		\ tabstop=2
 		\ shiftwidth=2
 		\ smarttab
