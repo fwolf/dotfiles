@@ -68,6 +68,9 @@ set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 " 显示行号
 "set number
 
+" F9 to toggle paste mode, press it will not input '<F9>' in insert mode
+set pastetoggle=<F9>
+
 " 使得vim在右下角显示当前行列数
 set ruler
 
@@ -114,9 +117,12 @@ map <silent> <F7> :SyntasticCheck<CR>
 " map <silent> <F7> :WMToggle<CR>
 map <silent> <F8> :TlistToggle<CR>
 
+" Define paste mode toggle key
+map <F9> :set invpaste<CR>
+" Obsolete:
 " F10去掉自动缩进功能，F11重新打开之，方便粘贴内容
-map <F9> :set autoindent<CR>:set cindent<CR>
-map <F10> :set noautoindent<CR>:set nocindent<CR>
+"map <F9> :set autoindent<CR>:set cindent<CR>
+"map <F10> :set noautoindent<CR>:set nocindent<CR>
 
 " 删除多层嵌套的邮件引文，顺便删除上面 sender 那行
 " 删除 google groups 的脚注，连同其上下的两个空行
