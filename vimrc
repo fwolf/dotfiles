@@ -59,6 +59,9 @@ set fileencodings=utf-bom,utf-8,gb2312,default
 " Sets how many lines of history VIM has to remember
 set history=1000
 
+" Show match when type search string
+set incsearch
+
 " Show buffer number in the status line.
 set laststatus=2 statusline=%02n:%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %P
 
