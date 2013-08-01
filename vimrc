@@ -97,6 +97,11 @@ nmap , \
 " Call SelectBuf, defaut key <F3> also usable
 map <leader>bb :SelectBuf<CR>
 
+" Buffer back/forward/last-used
+map <C-j> :bnext<CR>
+map <C-k> :bprev<CR>
+map <leader>g :b#<CR>
+
 " Syntastic check
 map <silent> <leader>sc :SyntasticCheck<CR>
 map <silent> <F7> :SyntasticCheck<CR>
