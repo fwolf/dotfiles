@@ -108,6 +108,9 @@ map <C-j> :bnext<CR>
 map <C-k> :bprev<CR>
 map <leader>g :b#<CR>
 
+" Ctrl-o to Toggle NERDTree
+map <C-o> :NERDTreeToggle<CR>
+
 " Syntastic check
 map <silent> <leader>sc :SyntasticCheck<CR>
 map <silent> <F7> :SyntasticCheck<CR>
