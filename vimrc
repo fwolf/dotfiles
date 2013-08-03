@@ -103,6 +103,9 @@ nmap , \
 " Call SelectBuf, defaut key <F3> also usable
 map <leader>bb :SelectBuf<CR>
 
+" Switch off current search highlight
+nmap <silent> <leader>/ :nohlsearch<CR>
+
 " Buffer back/forward/last-used
 map <C-j> :bnext<CR>
 map <C-k> :bprev<CR>
