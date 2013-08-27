@@ -191,7 +191,7 @@ let g:miniBufExplSplitBelow = 0
 " Disable Bookmarks, 0/n, 1/y
 let NERDTreeMinimalUI = 1
 " Close NERDTree window after open file, 0/n, 1/y
-let NERDTreeQuitOnOpen = 0
+let NERDTreeQuitOnOpen = 1
 " Window position, left/right
 let NERDTreeWinPos = 'right'
 let NERDTreeWinSize = 15
