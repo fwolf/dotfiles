@@ -80,6 +80,9 @@ set scrolloff=3
 " 根据代码结构自动缩进的空格数
 set shiftwidth=4
 
+set smarttab
+set softtabstop=4
+
 " tab键跳过的空格数
 set tabstop=4
 
@@ -407,6 +410,7 @@ if has('autocmd')
 	autocmd BufNewFile,BufRead *.css,*.htm,*.html,*.js,*.tpl,*.xml,*.xml.dist
         \ setlocal
 		\ tabstop=2
+		\ softtabstop=2
 		\ shiftwidth=2
 		\ smarttab
 		\ expandtab
