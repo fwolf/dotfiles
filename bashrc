@@ -19,8 +19,8 @@ export HISTCONTROL=ignoreboth
 # Add timestamp to history
 export HISTTIMEFORMAT='[%F %T] '
 # Extend history size
-export HISTSIZE=50000
-export HISTFILESIZE=50000
+export HISTSIZE=10000
+export HISTFILESIZE=10000
 # Write/read history instant, with modifier for adding tty
 # 1. Got total line number
 # 2. Line number minus 1 to the comment line
