@@ -2,5 +2,5 @@
 f006: 40G Mobile HDD SamSung MP0402H, 2012.12, Arch Linux i686.
 
 f005: 2G UsbDisk, 2012.
-	Disk space too small, no much use after install.
+    Disk space too small, no much use after install.
 

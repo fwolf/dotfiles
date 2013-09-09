@@ -1,12 +1,12 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vimrc of Fwolf
 "
-" @package		fwolfrc
-" @copyright	Copyright © 2012, Fwolf
-" @author		Fwolf <fwolf.aide+fwolfrc@gmail.com>
-" @license		http://opensource.org/licenses/mit-license MIT
-" @since		2012-09-24
-" @link			https://github.com/amix/vimrc
+" @package      fwolfrc
+" @copyright    Copyright © 2012, Fwolf
+" @author       Fwolf <fwolf.aide+fwolfrc@gmail.com>
+" @license      http://opensource.org/licenses/mit-license MIT
+" @since        2012-09-24
+" @link         https://github.com/amix/vimrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -52,9 +52,9 @@ set fileencodings=utf-bom,utf-8,gb2312,default
 " 允许折叠
 " http://scmbob.org/vim_fdm.html
 "set foldenable
-"set foldmethod=indent	" 按缩进折叠
-"set foldmethod=manual	" 手动折叠
-"set foldmethod=marker	" 按标记折叠，默认为 {{{ 和 }}}, 会自动添加
+"set foldmethod=indent  " 按缩进折叠
+"set foldmethod=manual  " 手动折叠
+"set foldmethod=marker  " 按标记折叠，默认为 {{{ 和 }}}, 会自动添加
 
 " Sets how many lines of history VIM has to remember
 set history=1000
@@ -342,10 +342,10 @@ Bundle 'xolox/vim-session'
 Bundle 'tpope/vim-surround'
 
 filetype plugin indent on
-" :BundleList			- list configured bundles
-" :BundleInstall(!)		- install(update) bundles
-" :BundleSearch(!) foo	- search(or refresh cache first) for foo
-" :BundleClean(!)		- confirm(or auto-approve) removal of unused bundles
+" :BundleList           - list configured bundles
+" :BundleInstall(!)     - install(update) bundles
+" :BundleSearch(!) foo  - search(or refresh cache first) for foo
+" :BundleClean(!)       - confirm(or auto-approve) removal of unused bundles
 " NOTE: comments after Bundle command are not allowed..
 
 
@@ -354,11 +354,11 @@ filetype plugin indent on
 " 每次開啟檔案, 都回復到上次的行數
 " Or press `"
 if has("autocmd")
-	autocmd BufRead *.txt set tw=78
-	autocmd BufReadPost *
-	\ if line("'\"") > 0 && line ("'\"") <= line("$") |
-	\ 	exe "normal g'\"" |
-	\ endif
+    autocmd BufRead *.txt set tw=78
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal g'\"" |
+    \ endif
 endif
 
 
@@ -372,34 +372,34 @@ function RemoveTrailingWhitespace()
         let b:curline = line(".")
         silent! %s/\s\+$//
 
-		" Original: remove \n at EOF
+        " Original: remove \n at EOF
         "silent! %s/\(\s*\n\)\+\%$//
-		" Changed: left 1 \n if more than 1 at EOF
+        " Changed: left 1 \n if more than 1 at EOF
         silent! %s/\(\s*\n\)\+\%$/\r/
 
         call cursor(b:curline, b:curcol)
     endif
 endfunction
 if has("autocmd")
-	autocmd BufWritePre * call RemoveTrailingWhitespace()
+    autocmd BufWritePre * call RemoveTrailingWhitespace()
 endif
 
 
 
 " 用浅色高亮当前行
 " if has("autocmd")
-" 	autocmd InsertLeave * se nocursorline
-" 	autocmd InsertEnter * se cursorline
+"   autocmd InsertLeave * se nocursorline
+"   autocmd InsertEnter * se cursorline
 " endif
 
 
 
 " Refresh taglist when save file
 if has('autocmd')
-	autocmd BufWritePost *.css	:TlistUpdate
-	autocmd BufWritePost *.js	:TlistUpdate
-	autocmd BufWritePost *.php	:TlistUpdate
-	autocmd BufWritePost *.py	:TlistUpdate
+    autocmd BufWritePost *.css  :TlistUpdate
+    autocmd BufWritePost *.js   :TlistUpdate
+    autocmd BufWritePost *.php  :TlistUpdate
+    autocmd BufWritePost *.py   :TlistUpdate
 endif
 
 
@@ -412,34 +412,34 @@ if has('autocmd')
         \ formatoptions+=qrocbt
 
 
-	" Indent css, html, js, tpl, xml file by 2 space
-	" Ignore TAB first, these file most use on web, 2 space reduce filesize
-	autocmd BufNewFile,BufRead *.css,*.htm,*.html,*.js,*.tpl,*.xml,*.xml.dist
+    " Indent css, html, js, tpl, xml file by 2 space
+    " Ignore TAB first, these file most use on web, 2 space reduce filesize
+    autocmd BufNewFile,BufRead *.css,*.htm,*.html,*.js,*.tpl,*.xml,*.xml.dist
         \ setlocal
-		\ tabstop=2
-		\ softtabstop=2
-		\ shiftwidth=2
-		\ smarttab
-		\ expandtab
+        \ tabstop=2
+        \ softtabstop=2
+        \ shiftwidth=2
+        \ smarttab
+        \ expandtab
 
 
-	" Indent python file by 4 space
-	autocmd FileType python setlocal
-		\ tabstop=4
-		\ softtabstop=4
-		\ shiftwidth=4
-		\ smarttab
-		\ expandtab
-	"	\ textwidth=80
+    " Indent python file by 4 space
+    autocmd FileType python setlocal
+        \ tabstop=4
+        \ softtabstop=4
+        \ shiftwidth=4
+        \ smarttab
+        \ expandtab
+    "   \ textwidth=80
 
 
 " Rst use 4 space(default) now
-	" Indent reStructuredText file by tab
-	" Use TAB
-	" Default GetRSTIndent() is indent by space, is there better replacement ?
-"	autocmd BufNewFile,BufRead *.rst setlocal
-"		\ noexpandtab
-"		\ indentexpr=GetPHPIndent()
+    " Indent reStructuredText file by tab
+    " Use TAB
+    " Default GetRSTIndent() is indent by space, is there better replacement ?
+"   autocmd BufNewFile,BufRead *.rst setlocal
+"       \ noexpandtab
+"       \ indentexpr=GetPHPIndent()
 endif
 
 

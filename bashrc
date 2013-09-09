@@ -27,12 +27,12 @@ export HISTFILESIZE=50000
 # 3. Build sed replace string
 # 4. Do replace using sed
 export PROMPT_COMMAND='
-	history -a;\
-#	history -n;\
-	TTY=`wc -l $HISTFILE | awk "{print \\$1}"`;\
-	let "TTY -= 1";\
-	TTY=$TTY"s/$/ "`tty | sed -e "s|/dev/||" -e "s|/|_|"`"/";\
-	sed -i -e "$TTY" $HISTFILE;\
+    history -a;\
+#   history -n;\
+    TTY=`wc -l $HISTFILE | awk "{print \\$1}"`;\
+    let "TTY -= 1";\
+    TTY=$TTY"s/$/ "`tty | sed -e "s|/dev/||" -e "s|/|_|"`"/";\
+    sed -i -e "$TTY" $HISTFILE;\
 '
 
 # Check the window size after each command and, if necessary,
@@ -51,9 +51,9 @@ fi
 
 # Numlock
 if [ -x /usr/bin/setleds ]; then
-	for tty in /dev/tty{1..6}; do
-		/usr/bin/setleds -D +num < /dev/tty > /dev/null 2>&1
-	done
+    for tty in /dev/tty{1..6}; do
+        /usr/bin/setleds -D +num < /dev/tty > /dev/null 2>&1
+    done
 fi
 
 # Path
@@ -65,9 +65,9 @@ export PATH=$PATH\
 
 # Terminal type hack
 case "$TERM" in
-	rxvt-unicode-256color)
-		TERM=rxvt-unicode
-		;;
+    rxvt-unicode-256color)
+        TERM=rxvt-unicode
+        ;;
 esac
 
 
@@ -156,7 +156,7 @@ alias mount='mount | column -t'
 
 # Pacman
 if [ -x /usr/bin/pacman-color ]; then
-	alias pacman='pacman-color'
+    alias pacman='pacman-color'
 fi
 
 
@@ -167,13 +167,13 @@ fi
 
 # Libtrash setting
 if [ -f /usr/lib/libtrash/libtrash.so ]; then
-	export LD_PRELOAD=/usr/lib/libtrash/libtrash.so
-	alias TrashOn='export TRASH_OFF=NO'
-	alias TrashOff='export TRASH_OFF=YES'
+    export LD_PRELOAD=/usr/lib/libtrash/libtrash.so
+    alias TrashOn='export TRASH_OFF=NO'
+    alias TrashOff='export TRASH_OFF=YES'
 fi
 # Execute TrashOff instant after set alias will fail, but why ?
 if [ -f /usr/lib/libtrash/libtrash.so ]; then
-	TrashOff
+    TrashOff
 fi
 
 
@@ -181,15 +181,15 @@ fi
 # http://linuxtoy.org/archives/color-manpages.html
 # Use VIm as man pager
 vman () {
-	export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
-		vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
-			-c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
-			-c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
+    export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
+        vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
+            -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
+            -c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
 
-	# invoke man page
-	man $1
+    # invoke man page
+    man $1
 
-	# we muse unset the PAGER, so regular man pager is used afterwards
-	unset PAGER
+    # we muse unset the PAGER, so regular man pager is used afterwards
+    unset PAGER
 }
 
