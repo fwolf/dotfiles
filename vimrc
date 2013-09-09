@@ -86,8 +86,8 @@ set softtabstop=4
 " tab键跳过的空格数
 set tabstop=4
 
-" Limit line width
-"set textwidth=72
+" Limit line width, also for auto text-reflow 'gq'
+set textwidth=78
 
 " 设置了在窗口右侧何处开始换行
 "set wrapmargin=8
@@ -405,6 +405,13 @@ endif
 
 
 if has('autocmd')
+    " Auto-format option(gq command)
+    " Put here for overwrite default option after each file open
+    autocmd FileType * setlocal
+        \ formatoptions-=w
+        \ formatoptions+=qrocbt
+
+
 	" Indent css, html, js, tpl, xml file by 2 space
 	" Ignore TAB first, these file most use on web, 2 space reduce filesize
 	autocmd BufNewFile,BufRead *.css,*.htm,*.html,*.js,*.tpl,*.xml,*.xml.dist
