@@ -7,6 +7,10 @@
 	[Position]	(UPPERLEFT) {-2 -2}
 [end]
 
+[app] (class=MPlayer) (title=MPlayer)
+	[Position]	(UPPERLEFT) {0 10}
+[end]
+
 [app] (opera)
 	[Dimensions] {1024 768}
 #	[Position]	(UPPERLEFT) {50 50}
