@@ -414,7 +414,8 @@ if has('autocmd')
 
     " Indent css, html, js, tpl, xml file by 2 space
     " Ignore TAB first, these file most use on web, 2 space reduce filesize
-    autocmd BufNewFile,BufRead *.css,*.htm,*.html,*.js,*.tpl,*.xml,*.xml.dist
+    autocmd BufNewFile,BufRead *.css,*.htm,*.html,*.js,*.json,
+\*.tpl,*.xml,*.xml.dist
         \ setlocal
         \ tabstop=2
         \ softtabstop=2
