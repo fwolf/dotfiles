@@ -434,6 +434,10 @@ if has('autocmd')
     "   \ textwidth=80
 
 
+    " Indent Golang file by tab
+    autocmd BufNewFile,BufRead *.go setlocal
+        \ noexpandtab
+
 " Rst use 4 space(default) now
     " Indent reStructuredText file by tab
     " Use TAB
