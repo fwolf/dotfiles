@@ -92,6 +92,13 @@ xterm-color)
 esac
 
 
+C_CLEAR=$(tput sgr0)        # "\033[00m"
+C_GREEN=$(tput setaf 2)     # "\033[1;32m"
+C_YELLOW=$(tput setaf 3)    # "\033[0;33m"
+C_BLUE=$(tput setaf 4)      # "\033[1;34m"
+C_BRIGHT=$(tput bold)
+
+
 # Add SCM branch info only if in SCM environment
 scm_branch() {
     SCM_BRANCH=''
@@ -105,19 +112,19 @@ scm_branch() {
     # \[ and \] must used in $PS* directly, so omit here in function
     # @link http://stackoverflow.com/questions/6592077
     if [ "" != "$SCM_BRANCH" ]; then
-        echo -e "\033[00m[\033[1;33m$SCM_BRANCH\033[00m]"
+        echo -ne "$C_CLEAR[$C_YELLOW$SCM_BRANCH$C_CLEAR]"
     fi
 }
 
 
 # Comment in the above and uncomment this below for a color prompt
-PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\$(scm_branch)\[\033[00m\]\$ "
+PS1="${debian_chroot:+($debian_chroot)}\[$C_GREEN$C_BRIGHT\u@\h$C_CLEAR:$C_BLUE$C_BRIGHT\w\$(scm_branch)$C_CLEAR\]\$ "
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
     # Use PS1
-    PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\$(scm_branch)\[\033[00m\]\$ "
+    PS1="\[$C_GREEN$C_BRIGHT\u@\h$C_CLEAR:$C_BLUE$C_BRIGHT\w\$(scm_branch)$C_CLEAR\]\$ "
     ;;
 *)
     ;;
