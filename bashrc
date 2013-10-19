@@ -92,6 +92,9 @@ xterm-color)
 esac
 
 
+# PS1 wrap problem:
+# @link http://stackoverflow.com/questions/1133031
+# @link http://mywiki.wooledge.org/BashFAQ/053
 C_CLEAR=$(tput sgr0)        # "\033[00m"
 C_GREEN=$(tput setaf 2)     # "\033[1;32m"
 C_YELLOW=$(tput setaf 3)    # "\033[0;33m"
@@ -118,13 +121,13 @@ scm_branch() {
 
 
 # Comment in the above and uncomment this below for a color prompt
-PS1="${debian_chroot:+($debian_chroot)}\[$C_GREEN$C_BRIGHT\u@\h$C_CLEAR:$C_BLUE$C_BRIGHT\w\$(scm_branch)$C_CLEAR\]\$ "
+PS1="${debian_chroot:+($debian_chroot)}\[$C_GREEN$C_BRIGHT\]\u@\h\[$C_CLEAR\]:\[$C_BLUE$C_BRIGHT\]\w\[$C_CLEAR\]\$ "
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
     # Use PS1
-    PS1="\[$C_GREEN$C_BRIGHT\u@\h$C_CLEAR:$C_BLUE$C_BRIGHT\w\$(scm_branch)$C_CLEAR\]\$ "
+    PS1="\[$C_GREEN$C_BRIGHT\]\u@\h\[$C_CLEAR\]:\[$C_BLUE$C_BRIGHT\]\w\[$C_CLEAR\]\$ "
     ;;
 *)
     ;;
