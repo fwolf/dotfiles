@@ -91,14 +91,33 @@ xterm-color)
     ;;
 esac
 
+
+# Add SCM branch info only if in SCM environment
+scm_branch() {
+    SCM_BRANCH=''
+    if hash git 2>/dev/null && [ -f "${PWD}/.git/config" ]; then
+        SCM_BRANCH=`git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f 3`
+    elif hash hg 2>/dev/null && [ -d "${PWD}/.hg/store" ]; then
+        SCM_BRANCH=`hg branch`
+    fi
+
+    # Color SCM branch info
+    # \[ and \] must used in $PS* directly, so omit here in function
+    # @link http://stackoverflow.com/questions/6592077
+    if [ "" != "$SCM_BRANCH" ]; then
+        echo -e "\033[00m[\033[1;33m$SCM_BRANCH\033[00m]"
+    fi
+}
+
+
 # Comment in the above and uncomment this below for a color prompt
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\$(scm_branch)\[\033[00m\]\$ "
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
     # Use PS1
-    PS1="\[\033[01;32m\]${USER}@${HOSTNAME}\[\033[00m\]:\[\033[01;34m\]${PWD/$HOME/~}\[\033[00m\]\$ "
+    PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\$(scm_branch)\[\033[00m\]\$ "
     ;;
 *)
     ;;
@@ -181,7 +200,7 @@ fi
 # Manpage colorlize
 # http://linuxtoy.org/archives/color-manpages.html
 # Use VIm as man pager
-vman () {
+vman() {
     export PAGER="/bin/sh -c \"unset PAGER;col -b -x | \
         vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>' \
             -c 'map <SPACE> <C-D>' -c 'map b <C-U>' \
