@@ -76,22 +76,6 @@ esac
 ####################
 
 
-# Set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# Set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-xterm-color)
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    ;;
-*)
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-    ;;
-esac
-
-
 # Solve PS1 wrap problem
 #
 # For dynamic PS1, there must use \$(function) or \$(other statement) in PS1
@@ -123,18 +107,23 @@ C_BLUE="\[$(tput setaf 4)\]"      # "\033[1;34m"
 C_BRIGHT="\[$(tput bold)\]"
 
 
-# Comment in the above and uncomment this below for a color prompt
-PS1="${debian_chroot:+($debian_chroot)}\[$C_GREEN$C_BRIGHT\]\u@\h\[$C_CLEAR\]:\[$C_BLUE$C_BRIGHT\]\w"
+# Base prompt
 
-# If this is an xterm set the title to user@host:dir
+# Debian chroot ?
+if [ -z "$DEBIAN_CHROOT" ] && [ -r /etc/debian_chroot ]; then
+    DEBIAN_CHROOT=$(cat /etc/debian_chroot)
+fi
+
+PS1="${DEBIAN_CHROOT:+($DEBIAN_CHROOT)}\[$C_GREEN$C_BRIGHT\]\u@\h\[$C_CLEAR\]:\[$C_BLUE$C_BRIGHT\]\w"
+
 case "$TERM" in
 xterm*|rxvt*)
-    # Use PS1
-    PS1="$C_GREEN$C_BRIGHT\u@\h$C_CLEAR:$C_BLUE$C_BRIGHT\w"
+    # Extra ?
     ;;
 *)
     ;;
 esac
+
 
 # Add SCM branch info if suitable
 PS1=$PS1"\$(
@@ -150,6 +139,7 @@ PS1=$PS1"\$(
         echo -ne \"$C_CLEAR[$C_YELLOW\$SCM_BRANCH$C_CLEAR]\"
     fi
 )"
+
 
 # Prompt tail, clear color
 PS1=$PS1"$C_CLEAR\$ "
