@@ -92,46 +92,67 @@ xterm-color)
 esac
 
 
-# PS1 wrap problem:
+# Solve PS1 wrap problem
+#
+# For dynamic PS1, there must use \$(function) or \$(other statement) in PS1
+# define statement. But:
+#
+# 1. Escape color delimiter \[ and \] must be used DIRECTLY in PS1, use it in
+# a function will be useless and get raw string.
+#
+# 2. Bash prompt length compute will ignore contents between \[ and \], so we
+# need these delimiter around all escape color code, and no actual output
+# content between delimiter, or bash will got wired wrap problem.
+#
+# Now, if we want to output colorful content in function, will got problem.
+#
+# Result: use multi-line \$(check and generate statement), include all things
+# which function will do. Also for clean code, escape color is defined with
+# delimiter.
+#
 # @link http://stackoverflow.com/questions/1133031
 # @link http://mywiki.wooledge.org/BashFAQ/053
-C_CLEAR=$(tput sgr0)        # "\033[00m"
-C_GREEN=$(tput setaf 2)     # "\033[1;32m"
-C_YELLOW=$(tput setaf 3)    # "\033[0;33m"
-C_BLUE=$(tput setaf 4)      # "\033[1;34m"
-C_BRIGHT=$(tput bold)
+# @link http://stackoverflow.com/questions/6592077
 
 
-# Add SCM branch info only if in SCM environment
-scm_branch() {
-    SCM_BRANCH=''
-    if hash git 2>/dev/null && [ -f "${PWD}/.git/config" ]; then
-        SCM_BRANCH=`git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f 3`
-    elif hash hg 2>/dev/null && [ -d "${PWD}/.hg/store" ]; then
-        SCM_BRANCH=`hg branch`
-    fi
-
-    # Color SCM branch info
-    # \[ and \] must used in $PS* directly, so omit here in function
-    # @link http://stackoverflow.com/questions/6592077
-    if [ "" != "$SCM_BRANCH" ]; then
-        echo -ne "$C_CLEAR[$C_YELLOW$SCM_BRANCH$C_CLEAR]"
-    fi
-}
+# Define colors
+C_CLEAR="\[$(tput sgr0)\]"        # "\033[00m"
+C_GREEN="\[$(tput setaf 2)\]"     # "\033[1;32m"
+C_YELLOW="\[$(tput setaf 3)\]"    # "\033[0;33m"
+C_BLUE="\[$(tput setaf 4)\]"      # "\033[1;34m"
+C_BRIGHT="\[$(tput bold)\]"
 
 
 # Comment in the above and uncomment this below for a color prompt
-PS1="${debian_chroot:+($debian_chroot)}\[$C_GREEN$C_BRIGHT\]\u@\h\[$C_CLEAR\]:\[$C_BLUE$C_BRIGHT\]\w\[$C_CLEAR\]\$ "
+PS1="${debian_chroot:+($debian_chroot)}\[$C_GREEN$C_BRIGHT\]\u@\h\[$C_CLEAR\]:\[$C_BLUE$C_BRIGHT\]\w"
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
     # Use PS1
-    PS1="\[$C_GREEN$C_BRIGHT\]\u@\h\[$C_CLEAR\]:\[$C_BLUE$C_BRIGHT\]\w\[$C_CLEAR\]\$ "
+    PS1="$C_GREEN$C_BRIGHT\u@\h$C_CLEAR:$C_BLUE$C_BRIGHT\w"
     ;;
 *)
     ;;
 esac
+
+# Add SCM branch info if suitable
+PS1=$PS1"\$(
+    SCM_BRANCH=''
+
+    if hash git 2>/dev/null && [ -f \"\${PWD}/.git/config\" ]; then
+        SCM_BRANCH=\$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f 3)
+    elif hash hg 2>/dev/null && [ -d \"\${PWD}/.hg/store\" ]; then
+        SCM_BRANCH=\$(hg branch)
+    fi
+
+    if [ \"\" != \"\$SCM_BRANCH\" ]; then
+        echo -ne \"$C_CLEAR[$C_YELLOW\$SCM_BRANCH$C_CLEAR]\"
+    fi
+)"
+
+# Prompt tail, clear color
+PS1=$PS1"$C_CLEAR\$ "
 
 
 # Git PS
