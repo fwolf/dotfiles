@@ -114,7 +114,7 @@ if [ -z "$DEBIAN_CHROOT" ] && [ -r /etc/debian_chroot ]; then
     DEBIAN_CHROOT=$(cat /etc/debian_chroot)
 fi
 
-PS1="${DEBIAN_CHROOT:+($DEBIAN_CHROOT)}\[$C_GREEN$C_BRIGHT\]\u@\h\[$C_CLEAR\]:\[$C_BLUE$C_BRIGHT\]\w"
+PS1="${DEBIAN_CHROOT:+($DEBIAN_CHROOT)}$C_GREEN$C_BRIGHT\u@\h$C_CLEAR:$C_BLUE$C_BRIGHT\w"
 
 case "$TERM" in
 xterm*|rxvt*)
