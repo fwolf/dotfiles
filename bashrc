@@ -68,6 +68,9 @@ case "$TERM" in
     rxvt-unicode-256color)
         TERM=rxvt-unicode
         ;;
+    screen-256color)
+        TERM=xterm-color
+        ;;
 esac
 
 
