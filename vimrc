@@ -171,6 +171,17 @@ let g:bufExplorerSplitRight=1
 
 
 
+" ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {
+    \ 'dir' : '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(dll|exe|so|tgz|zip)$',
+    \ }
+
+
+
 " Easy comment
 " http://www.vim.org/scripts/script.php?script_id=2082
 :runtime comments.vim
@@ -323,6 +334,7 @@ Bundle 'gmarik/vundle'
 
 " Repo of https://github.com/vim-scripts/ need only repo name
 Bundle 'bufexplorer.zip'
+Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'genutils'
 " Bundle 'minibufexpl.vim'
