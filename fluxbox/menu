@@ -54,6 +54,7 @@
 			[exec] (gnome-phone-manager) {/usr/bin/gnome-phone-manager}
 		[end]
 		[exec] (Chrome) {http_proxy="127.0.0.1:8118" https_proxy="127.0.0.1:8118" no_proxy="localhost,127.0.0.1,192.168.0.0/24,fwolf.com" /usr/bin/google-chrome}
+        [exec] (Chromium with switch.js) {/usr/bin/chromium --proxy-pac-url='file:///home/fwolf/dev/switch.pac/switch.pac'}
 		[exec] (Claws Mail) {/usr/bin/claws-mail}
 		[exec] (Downloader for X) {/usr/bin/nt} </usr/share/pixmaps/nt.xpm>
 		[exec] (Epiphany web browser) {/usr/bin/epiphany} <>
