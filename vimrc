@@ -290,6 +290,18 @@ let g:syntastic_debug = 1
 
 
 
+" Tablify
+let b:tablify_headerDelimiter = '#'
+let b:tablify_delimiter = '|'
+let b:tablify_vertDelimiter = '|'
+let b:tablify_horDelimiter = '-'
+let b:tablify_horHeaderDelimiter = '='
+let b:tablify_divideDelimiter = '+'
+let b:tablify_cellLeftPadding = 1
+let b:tablify_cellRightPadding = 1
+
+
+
 " TagList
 " 自动开启Tlist
 let Tlist_Auto_Open=0
@@ -342,10 +354,10 @@ Bundle 'fholgado/minibufexpl.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'SelectBuf'
+Bundle 'Stormherz/tablify'
 " Bundle 'Tabular'
 Bundle 'godlygeek/tabular'
 " Bundle 'majutsushi/tagbar'
-Bundle 'Unicode-RST-Tables'
 Bundle 'taglist.vim'
 Bundle 'terryma/vim-multiple-cursors'
 " vim-session need vim-misc
