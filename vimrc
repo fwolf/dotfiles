@@ -433,7 +433,7 @@ if has('autocmd')
     " Put here for overwrite default option after each file open
     autocmd FileType * setlocal
         \ formatoptions-=w
-        \ formatoptions+=qrocbt
+        \ formatoptions+=qrocbtBm
 
 
     " Indent css, html, js, tpl, xml file by 2 space
