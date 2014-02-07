@@ -41,6 +41,7 @@
 		[exec] (ReText) {/usr/bin/retext}
 		[exec] (Umbrello UML Modeller) {/usr/bin/umbrello}
 		[exec] (Yed) {java -jar /big2/tools/yed/yed.jar}
+        [exec] (Zeal) {/usr/bin/zeal}
 		[exec] (ZendStudio) {/big2/tools/ZendStudio-5.5.1/bin/ZDE}
 	[end]
 
