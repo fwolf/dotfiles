@@ -142,7 +142,7 @@
 
 	[submenu] (Games)
 		[exec] (Battle for Wesnoth Editor) {/usr/games/wesnoth_editor} </usr/share/pixmaps/wesnoth_editor-icon.xpm>
-		[exec] (Battle for Wesnoth) {/usr/games/wesnoth-nolog} </usr/share/pixmaps/wesnoth-icon.xpm>
+		[exec] (Battle for Wesnoth) {/usr/bin/wesnoth}
 		[exec] (Battle Tanks) {/usr/games/btanks} <>
 		[exec] (蓝迪游戏) {cd /big2/game/djgame2/; ./startdjg} </big2/game/djgame2/house.png>
 		[exec] (Cedega) {/usr/bin/cedega}
