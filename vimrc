@@ -192,7 +192,7 @@ let g:ctrlp_custom_ignore = {
 " Avoid vim highlight bug
 " let g:miniBufExplForceSyntaxEnable = 0
 " Window max lines
-let g:miniBufExplMaxSize = 3
+let g:miniBufExplMaxSize = 5
 " Avoidd MBE open buf in non-editable window
 let g:miniBufExplModSelTarget = 1
 " 0/upper or left, 1/down or right
