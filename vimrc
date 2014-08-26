@@ -345,6 +345,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Repo of https://github.com/vim-scripts/ need only repo name
+Bundle 'jiangmiao/auto-pairs'
 Bundle 'bufexplorer.zip'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
