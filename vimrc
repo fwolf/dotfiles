@@ -262,7 +262,7 @@ let selBufShowRelativePath = 0
 
 " Syntastic
 " Auto open error window
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list = 1
 " Skip check when buffer write
 let g:syntastic_check_on_wq = 0
 " Error window height
@@ -286,7 +286,7 @@ let g:syntastic_php_phpcs_post_args = '--standard=psr2'
 let g:syntastic_smarty_checkers = ['jsl']
 let g:syntastic_smarty_jsl_conf = '~/.jslrc'
 " Debug, :mes to view
-let g:syntastic_debug = 1
+let g:syntastic_debug = 0
 
 
 
