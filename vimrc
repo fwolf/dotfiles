@@ -508,3 +508,8 @@ function! UpdateCopyright()
         \   '\ze\%(\%([0-9]\{4\}\)\@!.\)*$:'.
         \ '\1-'.strftime("%Y").':e'
 endfunction
+
+if has('autocmd')
+    autocmd BufWritePre *.{php,sh}
+        \ call UpdateCopyright()
+endif
