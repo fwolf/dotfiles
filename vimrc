@@ -479,3 +479,32 @@ source ~/.vim/plugin/watchforchanges.vim
 let autoreadargs={'autoread':1}
 execute WatchForChanges('*',autoreadargs)
 
+
+
+" Update copyright notice
+" Only scan first 50 lines.
+" @link http://vim.wikia.com/wiki/Automatically_Update_Copyright_Notice_in_Files
+" @link http://oldj.net/article/vim-auto-last-update/
+function! UpdateCopyright()
+    let s:totalLines = line('$')
+    exe '1,' . min([50, s:totalLines]) . ' s:'.
+        \ '\cCOPYRIGHT\s*\%((c)\|©\|&copy;\)\?\s*'.
+        \   '\%([0-9]\{4}\(-[0-9]\{4\}\)\?,\s*\)*\zs'.
+        \   '\('.
+        \       '\%('.strftime("%Y").'\)\@![0-9]\{4\}'.
+        \       '\%(-'.strftime("%Y").'\)\@!\%(-[0-9]\{4\}\)\?'.
+        \   '\&'.
+        \       '\%([0-9]\{4\}-\)\?'.
+        \       '\%('.(strftime("%Y")-1).'\)\@!'.
+        \       '\%([0-9]\)\{4\}'.
+        \   '\)'.
+        \   '\ze\%(\%([0-9]\{4\}\)\@!.\)*$:'.
+        \ '&, '.strftime("%Y").':e'
+    exe '1,' . min([50, s:totalLines]) . ' s:'.
+        \ '\cCOPYRIGHT\s*\%((c)\|©\|&copy;\)\?\s*'.
+        \   '\%([0-9]\{4}\%(-[0-9]\{4\}\)\?,\s*\)*\zs'.
+        \       '\%('.strftime("%Y").'\)\@!\([0-9]\{4\}\)'.
+        \       '\%(-'.strftime("%Y").'\)\@!\%(-[0-9]\{4\}\)\?'.
+        \   '\ze\%(\%([0-9]\{4\}\)\@!.\)*$:'.
+        \ '\1-'.strftime("%Y").':e'
+endfunction
