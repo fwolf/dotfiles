@@ -73,6 +73,15 @@ case "$TERM" in
         ;;
 esac
 
+case "$TERM" in
+    xterm*|rxvt*)
+        # Extra ?
+        TERM=xterm-256color
+        ;;
+    *)
+        ;;
+esac
+
 
 ####################
 # Prompt
@@ -118,14 +127,6 @@ if [ -z "$DEBIAN_CHROOT" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 PS1="${DEBIAN_CHROOT:+($DEBIAN_CHROOT)}$C_GREEN$C_BRIGHT\u@\h$C_CLEAR:$C_BLUE$C_BRIGHT\w"
-
-case "$TERM" in
-xterm*|rxvt*)
-    # Extra ?
-    ;;
-*)
-    ;;
-esac
 
 
 # Add SCM branch info if suitable
