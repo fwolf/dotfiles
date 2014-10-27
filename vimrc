@@ -40,8 +40,10 @@ set nobackup
 set cindent
 
 " 超过 textwidth 指定行数的列高亮
-" set colorcolumn=+1
-" highlight ColorColumn ctermbg=lightgray guibg=lightgrey
+" Pick color: :runtime syntax/colortest.vim
+" 78 + 3 = 81, not visible in small 80 column window.
+set colorcolumn=+3
+highlight ColorColumn ctermbg=lightgray guibg=lightgrey
 
 "设置屏幕的列数
 set columns=80
