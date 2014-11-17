@@ -38,6 +38,7 @@
 		[exec] (Inkscape) {/usr/bin/inkscape}
 		[exec] (Komodo) {~/tools/Komodo-Edit-6/bin/komodo}
 		[exec] (Mockups) {/opt/Balsamiq\ Mockups/bin/Balsamiq\ Mockups}
+        [exec] (PhpStorm) {/usr/local/bin/phpstorm}
 		[exec] (ReText) {/usr/bin/retext}
 		[exec] (Umbrello UML Modeller) {/usr/bin/umbrello}
 		[exec] (Yed) {java -jar /big2/tools/yed/yed.jar}
