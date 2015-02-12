@@ -6,11 +6,38 @@
      * http://www.jshint.com/docs/options/
      */
 
-    "camelcase": true,
-    "indent": 2,
-    "undef": true,                      // Prevent use undeclared var
-    "quotmark": "single",
-    "maxlen": 80,
-    "trailing": true,                   // No trailing whitespace
-    "curly": true                       // Require {} for everything
+    "bitwise"       : true,
+    "camelcase"     : true,
+    "curly"         : true,                 /* Require {} for everything */
+    "eqeqeq"        : true,
+    "forin"         : true,
+    "freeze"        : true,
+    "immed"         : true,
+    "newcap"        : true,
+    "noarg"         : true,
+    "nocomma"       : true,
+    "noempty"       : true,
+    "nonbsp"        : true,
+    "nonew"         : true,
+    "quotmark"      : true,
+    "singleGroups"  : true,
+    "strict"        : true,
+    "trailing"      : true,                 /* No trailing whitespace */
+    "undef"         : true,                 /* Prevent use undeclared var */
+    "unused"        : true,
+
+    "funcscope"     : false,
+    "iterator"      : false,
+
+    "indent"        : 2,
+    "maxcomplexity" : 10,
+    "maxlen"        : 130,
+    "maxparams"     : 3,
+
+    "latedef"       : "nofunc",
+
+    /* Environments */
+    "browser"       : true,
+    "jquery"        : true,
+    "nostandard"    : true
 }
