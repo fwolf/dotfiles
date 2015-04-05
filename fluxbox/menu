@@ -73,6 +73,7 @@
 		[exec] (Remmina) {/usr/bin/remmina}
 #		[exec] (Terminal Server Client) {/usr/bin/tsclient -f} </usr/share/pixmaps/tsclient.xpm>
 		[exec] (uTorrent) {wine /big2/tools/uTorrent/utorrent.exe}
+        [exec] (WeCase 微盒) {/usr/bin/wecase}
 		[exec] (xvncviewer) {/usr/bin/xrealvncviewer} <>
 	[end]
 
