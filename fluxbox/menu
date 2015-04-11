@@ -59,6 +59,7 @@
 		[exec] (Google Chrome with switch.pac) {/usr/bin/google-chrome --proxy-pac-url='file:///home/fwolf/dev/switch.pac/switch.pac'}
         [exec] (Chromium with switch.pac) {/usr/bin/chromium --proxy-pac-url='file:///home/fwolf/dev/switch.pac/switch.pac'}
 		[exec] (Claws Mail) {/usr/bin/claws-mail}
+        [exec] (Corebird) {/usr/bin/proxychains /usr/bin/corebird}
 		[exec] (Downloader for X) {/usr/bin/nt} </usr/share/pixmaps/nt.xpm>
 		[exec] (Epiphany web browser) {/usr/bin/epiphany} <>
 		[exec] (FreeRapid) {cd /big2/tools/FreeRapid/; ./frd.sh}
