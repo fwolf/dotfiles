@@ -12,6 +12,7 @@
 		[exec] (GnoCHM) {/usr/bin/gnochm} </usr/share/pixmaps/gnochm.xpm>
 		[exec] (GNOME Commander) {env TRASH_OFF=NO /usr/bin/gnome-commander}
 		[exec] (Gnome Terminal) {/usr/bin/gnome-terminal} </usr/share/pixmaps/gnome-terminal.xpm>
+        [exec] (KeePass2) {/usr/bin/keepass2}
 		[exec] (mirage) {/usr/bin/mirage}
 		[exec] (muCommander) {/usr/bin/mucommander}
         [exec] (OutWiker) {/usr/bin/outwiker}
