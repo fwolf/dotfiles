@@ -26,6 +26,7 @@
 		[exec] (Scrot) {/usr/bin/scrot -s -b}
 		[exec] (SpaceFM) {/usr/bin/spacefm}
 		[exec] (stardict) {/usr/bin/stardict} </usr/share/pixmaps/stardict_32x32.xpm>
+        [exec] (Sunflower) {/usr/bin/sunflower}
 		[exec] (Xfce4-terminal) {/usr/bin/xfce4-terminal}
 		[exec] (Xfe) {/usr/bin/xfe}
 		[exec] (xsane) {/usr/bin/xsane} </usr/share/pixmaps/xsane.xpm>
