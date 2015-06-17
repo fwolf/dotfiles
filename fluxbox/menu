@@ -18,11 +18,9 @@
         [exec] (OutWiker) {/usr/bin/outwiker}
 		[exec] (Nautilus) {nautilus --no-desktop}
 		[exec] (PCManFM) {/usr/bin/pcmanfm}
-		[exec] (Qtodo) {/usr/bin/qtodo}
 #		[exec] (rxvt-unicode) {/usr/bin/urxvt}
 		[exec] (Rxvt 120x45) {urxvt -geometry 120x45 -name 120x45}
 		[exec] (rxvt-unicode * 4) {urxvtc "$@"; if [ $? -eq 2 ]; then urxvtd -q -o -f; urxvtc "$@"; fi; urxvtc; urxvtc; urxvtc}
-		[exec] (Scribes) {/usr/bin/scribes} </usr/share/pixmaps/scribes.xpm>
 		[exec] (Scrot) {/usr/bin/scrot -s -b}
 		[exec] (SpaceFM) {/usr/bin/spacefm}
 		[exec] (stardict) {/usr/bin/stardict} </usr/share/pixmaps/stardict_32x32.xpm>
