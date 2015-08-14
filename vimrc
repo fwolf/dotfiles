@@ -511,7 +511,7 @@ function! UpdateCopyright()
         \ '\1-'.strftime("%Y").':e'
 endfunction
 
-if has('autocmd')
-    autocmd BufWritePre *.{php,sh}
-        \ call UpdateCopyright()
-endif
+" if has('autocmd')
+"     autocmd BufWritePre *.{php,sh}
+"         \ call UpdateCopyright()
+" endif
