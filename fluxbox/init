@@ -28,7 +28,9 @@ session.screen0.toolbar.widthPercent:	55
 session.screen0.toolbar.autoHide:	false
 session.screen0.toolbar.maxOver:	false
 session.screen0.toolbar.height:	0
-session.screen0.toolbar.tools:	workspacename, prevworkspace, nextworkspace, iconbar, systemtray, prevwindow, nextwindow, clock
+# 禁用 Fluxbox 自带的 System Tray
+#session.screen0.toolbar.tools:	workspacename, prevworkspace, nextworkspace, iconbar, systemtray, prevwindow, nextwindow, clock
+session.screen0.toolbar.tools:	workspacename, prevworkspace, nextworkspace, iconbar, prevwindow, nextwindow, clock
 session.screen0.toolbar.placement:	BottomCenter
 session.screen0.clientMenu.usePixmap:	true
 session.screen0.slit.onTop:	false
