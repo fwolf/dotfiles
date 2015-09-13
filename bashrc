@@ -13,27 +13,36 @@
 #LC_CTYPE="zh_CN.UTF-8"
 
 
+
+# When shell exits, append to history file instead of overwriting it
+shopt -s histappend
+
 # Don't put duplicate lines in the history. See bash(1) for more options
 # 忽略命令行历史的重复命令和以空格开头的命令
 export HISTCONTROL=ignoreboth
+
 # Add timestamp to history
 export HISTTIMEFORMAT='[%F %T] '
+
 # Extend history size
 export HISTSIZE=10000
-export HISTFILESIZE=10000
+export HISTFILESIZE=50000
+
 # Write/read history instant, with modifier for adding tty
 # 1. Got total line number
 # 2. Line number minus 1 to the comment line
 # 3. Build sed replace string
 # 4. Do replace using sed
-export PROMPT_COMMAND='
-    history -a;\
-#   history -n;\
-    TTY=`wc -l $HISTFILE | awk "{print \\$1}"`;\
-    let "TTY -= 1";\
-    TTY=$TTY"s/$/ "`tty | sed -e "s|/dev/||" -e "s|/|_|"`"/";\
-    sed -i -e "$TTY" $HISTFILE;\
-'
+#export PROMPT_COMMAND='
+#    history -a;\
+##   history -n;\
+#    TTY=`wc -l $HISTFILE | awk "{print \\$1}"`;\
+#    let "TTY -= 1";\
+#    TTY=$TTY"s/$/ "`tty | sed -e "s|/dev/||" -e "s|/|_|"`"/";\
+#    sed -i -e "$TTY" $HISTFILE;\
+#'
+
+
 
 # Check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
