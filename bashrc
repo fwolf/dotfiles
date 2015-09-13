@@ -28,6 +28,9 @@ export HISTTIMEFORMAT='[%F %T] '
 export HISTSIZE=10000
 export HISTFILESIZE=50000
 
+# Save but NOT reload the history after each command finishes
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
 # Write/read history instant, with modifier for adding tty
 # 1. Got total line number
 # 2. Line number minus 1 to the comment line
