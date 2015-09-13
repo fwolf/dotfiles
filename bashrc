@@ -191,10 +191,13 @@ alias gitlog2='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Cre
 # Ls
 # Enable color support of ls and also add handy aliases
 if [ "$TERM" != "dumb" ]; then
-    eval "`dircolors -b`"
-    alias ls='ls --color=auto'
-    #alias dir='ls --color=auto --format=vertical'
-    #alias vdir='ls --color=auto --format=long'
+    export CLICOLOR=YES
+    if [ "Darwin" == $(uname) ]; then
+        export LSCOLORS="Gxfxcxdxbxegedabagacad"
+    else
+        eval "`dircolors -b`"
+        alias ls='ls --color=auto'
+    fi
 fi
 # Some more ls aliases
 alias ll='ls -l'
