@@ -73,7 +73,7 @@ export PATH=$PATH\
 :~/bin\
 :~/bin.private\
 :~/bin.public\
-:/usr/lib/mutt/
+:/usr/lib/mutt
 
 # Terminal type hack
 case "$TERM" in
