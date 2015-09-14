@@ -69,7 +69,9 @@ if [ -x /usr/bin/setleds ]; then
 fi
 
 # Path
-export PATH=$PATH\
+export PATH=/usr/local/bin\
+:/usr/local/sbin\
+:$PATH\
 :~/bin\
 :~/bin.private\
 :~/bin.public\
