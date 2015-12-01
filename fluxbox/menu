@@ -91,6 +91,7 @@
 #		[exec] (OpenOffice.org Impress) {/usr/bin/ooimpress} </usr/share/icons/gnome/32x32/apps/openofficeorg23-impress.xpm>
 #		[exec] (OpenOffice.org Writer) {/usr/bin/oowriter} </usr/share/icons/gnome/32x32/apps/openofficeorg23-writer.xpm>
 #		[exec] (OpenOffice.org Math) {/usr/bin/oomath} </usr/share/icons/gnome/32x32/apps/openofficeorg23-math.xpm>
+        [exec] (WPS) {/usr/bin/wps}
 
 		[submenu] (Stock)
 			[exec] (JStock) {/big2/tools/stock/jstock/jstock.sh}
