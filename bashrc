@@ -226,6 +226,10 @@ alias l='ls -CF'
 alias mount='mount | column -t'
 
 
+# Others
+alias rdesktop='rdesktop -z -x m -a 16 -P'
+
+
 # Pacman
 if [ -x /usr/bin/pacman-color ]; then
     alias pacman='pacman-color'
