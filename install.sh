@@ -84,6 +84,7 @@ LnFile fluxbox      ~/.fluxbox
 LnFile inputrc      ~/.inputrc
 LnFile jshintrc     ~/.jshintrc
 LnFile jslrc        ~/.jslrc
+LnFile mailcap      ~/.mailcap
 LnFile tmux.conf    ~/.tmux.conf
 LnFile vim          ~/.vim
 LnFile vimrc        ~/.vimrc

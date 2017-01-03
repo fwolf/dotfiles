@@ -1,0 +1,28 @@
+# Mailcap for mutt - By Fwolf
+# https://gist.github.com/fwolf/f5bf675c80b818bd1941971853ae2422
+#application/x-gzip; /bin/gzip -cd '%s'; test=test -n "$DISPLAY"
+
+# Fake cap for pgp signature, got better idea ?
+application/pgp-signature; cat '%s'; copiousoutput
+
+#image/bmp; display 'bmp:%s'; test=test -n "$DISPLAY"
+image/*; /usr/bin/feh '%s'; test=test -n "$DISPLAY"
+
+#text/html; lynx -dump -force_html %s; needsterminal; copiousoutput;
+#text/html; elinks -dump -dump-charset %{charset} -default-mime-type text/html %s; needsterminal; copiousoutput;
+
+text/html;\
+    /usr/bin/google-chrome '%s' & sleep 10;\
+    description=HTML Text;\
+    test=test -n "$DISPLAY";\
+    nametemplate=%s.html;
+#    firefox '%s' & sleep 10;\
+#text/html; epiphany '%s' & sleep 3; description=HTML Text; test=test -n "$DISPLAY";  nametemplate=%s.html
+#text/html; firefox '%s' & sleep 3; description=HTML Text; test=test -n "$DISPLAY";  nametemplate=%s.html
+
+text/html;\
+	w3m -T text/html -I %{charset} -dump %s;\
+	nametemplate=%s.html;\
+	copiousoutput
+
+application/vnd.ms-word; soffice '%s'
