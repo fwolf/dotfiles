@@ -150,7 +150,7 @@ PS1="${DEBIAN_CHROOT:+($DEBIAN_CHROOT)}$C_GREEN$C_BRIGHT\u@\h$C_CLEAR:$C_BLUE$C_
 PS1=$PS1"\$(
     SCM_BRANCH=''
 
-    if hash git 2>/dev/null && [ -f \"\${PWD}/.git/config\" ]; then
+    if hash git 2>/dev/null && [ -e \"\${PWD}/.git\" ]; then
         SCM_BRANCH=\$(git symbolic-ref HEAD 2>/dev/null | cut -d'/' -f 3)
     elif hash hg 2>/dev/null && [ -d \"\${PWD}/.hg/store\" ]; then
         SCM_BRANCH=\$(hg branch)
