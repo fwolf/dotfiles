@@ -340,40 +340,46 @@ let g:session_autosave = 'no'
 
 " Vundle
 " Plugin define here need not ~/.vim/plugin/xxx.vim anymore.
+set nocompatible              " be iMproved, required
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Repo of https://github.com/vim-scripts/ need only repo name
-Bundle 'jiangmiao/auto-pairs'
-Bundle 'bufexplorer.zip'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'genutils'
-" Bundle 'minibufexpl.vim'
-Bundle 'fholgado/minibufexpl.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'SelectBuf'
-Bundle 'Stormherz/tablify'
-" Bundle 'Tabular'
-Bundle 'godlygeek/tabular'
-" Bundle 'majutsushi/tagbar'
-Bundle 'taglist.vim'
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'jiangmiao/auto-pairs'
+Plugin 'bufexplorer.zip'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'genutils'
+" Plugin 'minibufexpl.vim'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'SelectBuf'
+Plugin 'Stormherz/tablify'
+" Plugin 'Tabular'
+Plugin 'godlygeek/tabular'
+" Plugin 'majutsushi/tagbar'
+Plugin 'taglist.vim'
+Plugin 'terryma/vim-multiple-cursors'
 " vim-session need vim-misc
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-session'
-Bundle 'tpope/vim-surround'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-session'
+Plugin 'tpope/vim-surround'
 
+call vundle#end()
 filetype plugin indent on
-" :BundleList           - list configured bundles
-" :BundleInstall(!)     - install(update) bundles
-" :BundleSearch(!) foo  - search(or refresh cache first) for foo
-" :BundleClean(!)       - confirm(or auto-approve) removal of unused bundles
-" NOTE: comments after Bundle command are not allowed..
+
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
 
 
 
