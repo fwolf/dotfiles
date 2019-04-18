@@ -349,6 +349,7 @@ Plugin 'gmarik/vundle'
 
 " Repo of https://github.com/vim-scripts/ need only repo name
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'nathangrigg/vim-beancount'
 Plugin 'bufexplorer.zip'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
