@@ -349,7 +349,6 @@ Plugin 'gmarik/vundle'
 
 " Repo of https://github.com/vim-scripts/ need only repo name
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'nathangrigg/vim-beancount'
 Plugin 'bufexplorer.zip'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
@@ -366,7 +365,9 @@ Plugin 'godlygeek/tabular'
 Plugin 'taglist.vim'
 Plugin 'terryma/vim-multiple-cursors'
 " vim-session need vim-misc
+Plugin 'nathangrigg/vim-beancount'
 Plugin 'xolox/vim-misc'
+Plugin 'alvan/vim-php-manual'
 Plugin 'xolox/vim-session'
 Plugin 'tpope/vim-surround'
 
