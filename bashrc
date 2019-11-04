@@ -80,6 +80,9 @@ export PATH=/usr/local/bin\
 :~/bin.public\
 :/usr/lib/mutt
 
+export PYTHONPATH=~/dev/bean/plugins\
+:$PYTHONPATH
+
 # Terminal type hack
 case "$TERM" in
     rxvt-unicode-256color)
