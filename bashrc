@@ -80,7 +80,9 @@ export PATH=/usr/local/bin\
 :~/bin.public\
 :/usr/lib/mutt
 
+# For Fava plugins
 export PYTHONPATH=~/dev/bean/plugins\
+:~/dev/bean/plugins/autobean\
 :$PYTHONPATH
 
 # Terminal type hack
