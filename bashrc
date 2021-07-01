@@ -78,6 +78,7 @@ export PATH=/usr/local/bin\
 :~/bin\
 :~/bin.private\
 :~/bin.public\
+:~/.local/bin\
 :/usr/lib/mutt
 
 # For Fava plugins
